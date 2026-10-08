@@ -1,6 +1,15 @@
 const publications = [
   {
     year: 2026,
+    title: "A Polar Coordinate Prior for Self-Supervised Strong-Lens Representations",
+    authors: "Karthik Gaur, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
+    summary: "Polar resampling with an azimuthal residual exposes non-axisymmetric lens structure and improves label-efficient representations without changing the encoder backbone.",
+    tags: ["representations", "physics", "dark-matter"],
+    labels: ["Self-supervision", "Polar coordinates", "Simulated"],
+    href: "papers/2026_polar-coordinate-prior_strong-lens-representations.pdf"
+  },
+  {
+    year: 2026,
     title: "Lens-LeJEPA: Learning the Right Invariances for Strong Gravitational Lenses",
     authors: "DeepLense collaboration",
     summary: "Task-aware joint-embedding learning with exact D4 correspondence and arc-weighted radial consistency.",
