@@ -126,6 +126,12 @@ img { display: block; max-width: 100%; }
 .scroll-cue { position: absolute; z-index: 2; left: 26px; bottom: 36px; display: flex; align-items: center; gap: 12px; transform: rotate(-90deg) translateX(100%); transform-origin: left bottom; font-size: 10px; text-transform: uppercase; letter-spacing: .16em; }
 .scroll-cue i { width: 56px; height: 1px; background: var(--ink); }
 
+/* Wide, short viewports need a content-led hero instead of vertical centering. */
+@media (min-width: 721px) and (min-aspect-ratio: 4 / 3) {
+  .hero { min-height: max(880px, 100svh); }
+  .hero-content { top: clamp(132px, 15svh, 170px); transform: none; }
+}
+
 .spotlight-banner { width: min(calc(100% - 48px), var(--max)); min-height: 86px; margin: 26px auto 0; padding: 20px 24px; display: grid; grid-template-columns: 1fr 1.45fr auto; align-items: center; gap: 30px; border: 1px solid rgba(16,45,44,.18); border-radius: 17px; background: var(--forest); color: var(--white); transition: transform .2s var(--ease), box-shadow .2s; }
 .spotlight-banner:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .spotlight-label { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.66); font: 550 10px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .07em; text-transform: uppercase; }
