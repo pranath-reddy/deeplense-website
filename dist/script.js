@@ -1,0 +1,356 @@
+const publications = [
+  {
+    year: 2026,
+    title: "Lens-LeJEPA: Learning the Right Invariances for Strong Gravitational Lenses",
+    authors: "DeepLense collaboration",
+    summary: "Task-aware joint-embedding learning with exact D4 correspondence and arc-weighted radial consistency.",
+    tags: ["representations", "physics", "dark-matter"],
+    labels: ["Self-supervision", "D4 symmetry", "Simulated"],
+    href: "papers/pranath/54_Lens_LeJEPA_Learning_the_Ri%20(1).pdf"
+  },
+  {
+    year: 2026,
+    title: "D4-Equivariant Hybrid Quantum-Classical Learning for Strong Gravitational Lens Classification",
+    authors: "Sushmanth Reddy, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
+    summary: "A controlled hybrid model that refines orbit-averaged classical features without claiming quantum advantage.",
+    tags: ["physics", "dark-matter"],
+    labels: ["Quantum-classical", "Equivariance", "Simulated"],
+    href: "papers/pranath/FSS-26_Paper_XXX_8741.pdf"
+  },
+  {
+    year: 2026,
+    title: "DLens: Closed-Loop AI Agents for Parsimonious Scientific Machine Learning",
+    authors: "DeepLense collaboration",
+    summary: "Typed scientific agents connect lens simulation, architecture search, evaluation, and experiment planning.",
+    tags: ["agents", "dark-matter"],
+    labels: ["Agents", "Architecture search", "Auditable workflow"],
+    href: "papers/pranath/FSS-26_Paper_XXX_2415%20(1).pdf"
+  },
+  {
+    year: 2026,
+    title: "Selective Memory Retention for Long-Horizon LLM Agents",
+    authors: "Pranath Reddy",
+    summary: "A bounded-memory study of learned retention under clean and noisy long-horizon agent experience.",
+    tags: ["agents"],
+    labels: ["LLM agents", "Memory", "Broader AI"],
+    href: "papers/pranath/2026_selective-memory-retention_icml-workshop.pdf"
+  },
+  {
+    year: 2026,
+    title: "Trace–Answer Compatibility Emerges at Depth and Mediates Prediction in Diffusion Language Models",
+    authors: "Anonymous review copy",
+    summary: "An interpretability study of late hidden-state signals linking generated reasoning traces to final answers.",
+    tags: ["representations"],
+    labels: ["Interpretability", "Diffusion LMs", "Broader AI"],
+    href: "papers/pranath/123_Trace_Answer_Compatibility.pdf"
+  },
+  {
+    year: 2025,
+    title: "FlowLensing: Simulating Gravitational Lensing with Flow Matching",
+    authors: "Hamees Sayed, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
+    summary: "Fast, controllable generation of strong-lensing images across discrete classes and continuous parameters.",
+    tags: ["generation", "dark-matter"],
+    labels: ["Flow matching", "Simulation", "Conditional generation"],
+    href: "papers/pranath/2025_flowlensing_neurips-workshop.pdf"
+  },
+  {
+    year: 2025,
+    title: "Lens-JEPA: Physics-Informed Joint Embedding Predictive Architecture for Gravitational Lensing",
+    authors: "J Rishi, Pranath Reddy Kumbam, Michael W. Toomey & Sergei Gleyzer",
+    summary: "Joint-embedding predictive learning paired with a lens-equation physical encoder.",
+    tags: ["representations", "physics", "dark-matter"],
+    labels: ["JEPA", "Foundation models", "Simulated"],
+    href: "papers/pranath/2025_lens-jepa_neurips-workshop.pdf"
+  },
+  {
+    year: 2025,
+    title: "HEAL-PINN: Physics-Informed Swin Transformer for Sparse Lensing Data",
+    authors: "Dhruv Srivastava, Pranath Reddy Kumbam, Michael W. Toomey & Sergei Gleyzer",
+    summary: "Geometry-aware windows and lens-equation encoding for sparse-data morphology classification.",
+    tags: ["physics", "dark-matter"],
+    labels: ["Swin Transformer", "PINN", "Sparse data"],
+    href: "papers/pranath/2025_heal-pinn_neurips-workshop.pdf"
+  },
+  {
+    year: 2025,
+    title: "From Simulation to Survey: Benchmarking Super-Resolution for LSST-like Lensing Data",
+    authors: "Aleksandr Duplinskii, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
+    summary: "A direct test of whether better-looking reconstructions also improve downstream physical estimates.",
+    tags: ["generation", "dark-matter"],
+    labels: ["Super-resolution", "LSST-like", "Scientific utility"],
+    href: "papers/pranath/2025_simulation-to-survey_neurips-workshop.pdf"
+  },
+  {
+    year: 2025,
+    title: "Domain Adaptation in Application to Gravitational Lens Finding",
+    authors: "Hanna Parul, Sergei Gleyzer, Pranath Reddy & Michael W. Toomey",
+    summary: "Simulation-to-observation transfer for rare lens discovery in real Hyper Suprime-Cam data.",
+    tags: ["dark-matter", "representations"],
+    labels: ["Domain adaptation", "Real observations", "Lens finding"],
+    href: "papers/pranath/2025_domain-adaptation-lens-finding_journal-preprint.pdf"
+  },
+  {
+    year: 2024,
+    title: "DiffLense: A Conditional Diffusion Model for Super-Resolution of Gravitational Lensing Data",
+    authors: "Pranath Reddy, Michael W. Toomey, Hanna Parul & Sergei Gleyzer",
+    summary: "Conditional diffusion for enhancing low-resolution lensing images while preserving fine morphology.",
+    tags: ["generation", "dark-matter"],
+    labels: ["Diffusion", "Super-resolution", "Mixed data"],
+    href: "papers/pranath/2024_difflense_journal-preprint.pdf"
+  },
+  {
+    year: 2024,
+    title: "LensPINN: Physics-Informed Neural Network for Learning Dark Matter Morphology in Lensing",
+    authors: "Ashutosh Ojha, Sergei Gleyzer, Michael W. Toomey & Pranath Reddy Kumbam",
+    summary: "A ViT physical encoder and lens-equation inversion improve compact morphology classifiers.",
+    tags: ["physics", "dark-matter"],
+    labels: ["PINN", "Vision Transformer", "Simulated"],
+    href: "papers/pranath/2024_lenspinn_neurips-workshop.pdf"
+  },
+  {
+    year: 2024,
+    title: "Semi-Supervised Super-Resolution for Gravitational Lenses with an Estimated Degradation Model",
+    authors: "Peimeng Guan, Sergei Gleyzer & Michael W. Toomey",
+    summary: "Adaptive loop unrolling learns from sparse pairs when the observing operator is not exactly known.",
+    tags: ["generation", "physics"],
+    labels: ["Semi-supervision", "Inverse problems", "Sparse pairs"],
+    href: "papers/non-pranath/NeurIPS_ML4PS_2024_110.pdf"
+  },
+  {
+    year: 2024,
+    title: "Unsupervised Physics-Informed Super-Resolution of Strong Lensing Images for Sparse Datasets",
+    authors: "Anirudh Shankar, Michael W. Toomey & Sergei Gleyzer",
+    summary: "The lens equation supplies supervision when high-resolution targets are unavailable.",
+    tags: ["generation", "physics"],
+    labels: ["Unsupervised", "Super-resolution", "Lens equation"],
+    href: "papers/non-pranath/NeurIPS_ML4PS_2024_124.pdf"
+  },
+  {
+    year: 2023,
+    title: "Domain Adaptation for Simulation-Based Dark Matter Searches Using Strong Gravitational Lensing",
+    authors: "Stephon Alexander, Sergei Gleyzer, Pranath Reddy, Marcos Tidball & Michael W. Toomey",
+    summary: "Adversarial and consistency-based adaptation reduce performance loss across simulated observing domains.",
+    tags: ["dark-matter", "representations"],
+    labels: ["Domain adaptation", "Equivariance", "Simulation"],
+    href: "papers/pranath/2023_domain-adaptation-dark-matter_journal-preprint.pdf"
+  },
+  {
+    year: 2023,
+    title: "Equivariant Neural Networks for Signatures of Dark Matter Morphology in Strong Lensing Data",
+    authors: "Geo Jolly Cheeramvelil, Sergei Gleyzer & Michael W. Toomey",
+    summary: "Rotation- and reflection-aware networks encode physical symmetry directly into the architecture.",
+    tags: ["physics", "dark-matter"],
+    labels: ["Equivariance", "C8 symmetry", "Simulated"],
+    href: "papers/non-pranath/NeurIPS_ML4PS_2023_188.pdf"
+  },
+  {
+    year: 2023,
+    title: "Learning Dark Matter Representation From Strong Lensing Images Through Self-Supervision",
+    authors: "Yashwardhan A. Deshmukh, Sergei Gleyzer, Kartik Sachdev & Michael W. Toomey",
+    summary: "Contrastive learning, BYOL, SimSiam, and DINO build reusable encoders from unlabeled simulations.",
+    tags: ["representations", "dark-matter"],
+    labels: ["Self-supervision", "Transformers", "Simulated"],
+    href: "papers/non-pranath/NeurIPS_ML4PS_2023_207.pdf"
+  },
+  {
+    year: 2023,
+    title: "Lensformer: A Physics-Informed Vision Transformer for Gravitational Lensing",
+    authors: "Lucas J. Velôso, Michael W. Toomey & Sergei Gleyzer",
+    summary: "A Transformer is paired with lensing-potential estimation and source reconstruction.",
+    tags: ["physics", "representations", "dark-matter"],
+    labels: ["Vision Transformer", "Lens equation", "Simulated"],
+    href: "papers/non-pranath/NeurIPS_ML4PS_2023_214.pdf"
+  },
+  {
+    year: 2021,
+    title: "Decoding Dark Matter Substructure without Supervision",
+    authors: "Stephon Alexander, Sergei Gleyzer, Hanna Parul, Pranath Reddy, Michael W. Toomey, Emanuele Usai & Ryker Von Klar",
+    summary: "Autoencoders learn a smooth-halo baseline and flag unexpected substructure through reconstruction error.",
+    tags: ["dark-matter", "representations"],
+    labels: ["Anomaly detection", "Unsupervised", "Simulated"],
+    href: "papers/pranath/2020_decoding-dark-matter-substructure_neurips-workshop-preprint.pdf"
+  },
+  {
+    year: 2021,
+    title: "Deep Learning the Morphology of Dark Matter Substructure",
+    authors: "Stephon Alexander, Sergei Gleyzer, Evan McDonough, Michael W. Toomey & Emanuele Usai",
+    summary: "The founding study frames dark-matter substructure as morphology classification in simulated strong lenses.",
+    tags: ["dark-matter"],
+    labels: ["Founding paper", "CNN", "2019 preprint · 2020 journal"],
+    href: "papers/founding/1909.07346v1.pdf"
+  }
+];
+
+function setupNavigation() {
+  const header = document.querySelector('[data-header]');
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const nav = document.querySelector('[data-nav]');
+  const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 20);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    nav?.classList.toggle('open', open);
+    document.body.classList.toggle('nav-open', open);
+  });
+  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    toggle?.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('open');
+    document.body.classList.remove('nav-open');
+  }));
+}
+
+function setupReveals() {
+  const items = document.querySelectorAll('.reveal:not(.visible)');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach(item => item.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+  items.forEach(item => observer.observe(item));
+}
+
+function publicationMarkup(paper) {
+  const labels = paper.labels.map(label => `<span>${label}</span>`).join('');
+  return `
+    <a class="publication-card reveal" href="${paper.href}" data-tags="${paper.tags.join(' ')}" data-search="${[paper.title, paper.authors, paper.summary, paper.labels.join(' '), paper.year].join(' ').toLowerCase()}">
+      <div class="publication-title">
+        <h3>${paper.title}</h3>
+        <p>${paper.authors}</p>
+        <div class="publication-tags">${labels}</div>
+      </div>
+      <p class="publication-summary">${paper.summary}</p>
+      <span class="publication-link" aria-hidden="true">↗</span>
+    </a>`;
+}
+
+function setupPublications() {
+  const containers = document.querySelectorAll('[data-publications]');
+  if (!containers.length) return;
+  containers.forEach(container => {
+    const year = Number(container.dataset.publications);
+    container.innerHTML = publications.filter(paper => paper.year === year).map(publicationMarkup).join('');
+  });
+  document.querySelectorAll('[data-paper-count]').forEach(node => node.textContent = publications.length);
+  const search = document.querySelector('[data-paper-search]');
+  const filters = [...document.querySelectorAll('[data-filter]')];
+  const empty = document.querySelector('[data-empty-state]');
+  let activeFilter = 'all';
+
+  const applyFilters = () => {
+    const term = (search?.value || '').trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.publication-card').forEach(card => {
+      const categoryMatch = activeFilter === 'all' || card.dataset.tags.split(' ').includes(activeFilter);
+      const searchMatch = !term || card.dataset.search.includes(term);
+      const visible = categoryMatch && searchMatch;
+      card.hidden = !visible;
+      if (visible) visibleCount += 1;
+    });
+    document.querySelectorAll('[data-year-group]').forEach(group => {
+      group.hidden = !group.querySelector('.publication-card:not([hidden])');
+    });
+    if (empty) empty.hidden = visibleCount !== 0;
+  };
+  search?.addEventListener('input', applyFilters);
+  filters.forEach(button => button.addEventListener('click', () => {
+    activeFilter = button.dataset.filter;
+    filters.forEach(item => item.classList.toggle('active', item === button));
+    applyFilters();
+  }));
+}
+
+function setupLensCanvas() {
+  const canvas = document.querySelector('[data-lens-canvas]');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let pointer = { x: .73, y: .43 };
+  let target = { ...pointer };
+  let raf = 0;
+
+  const resize = () => {
+    const rect = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = rect.width;
+    height = rect.height;
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    draw();
+  };
+
+  const arc = (cx, cy, rx, ry, rotation, start, end, color, lineWidth = 1) => {
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, rx, ry, rotation, start, end);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = lineWidth;
+    ctx.stroke();
+  };
+
+  const draw = () => {
+    ctx.clearRect(0, 0, width, height);
+    const cx = width * pointer.x;
+    const cy = height * pointer.y;
+    const base = Math.min(width, height) * .31;
+
+    const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, base * .75);
+    glow.addColorStop(0, 'rgba(244,240,168,.82)');
+    glow.addColorStop(.07, 'rgba(244,240,168,.3)');
+    glow.addColorStop(.46, 'rgba(168,239,192,.08)');
+    glow.addColorStop(1, 'rgba(168,239,192,0)');
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, width, height);
+
+    for (let i = 0; i < 11; i += 1) {
+      const r = base * (.42 + i * .085);
+      arc(cx, cy, r, r * (.48 + i * .012), -.48 + i * .075, -.08, Math.PI * 1.43, `rgba(16,45,44,${.32 - i * .018})`, i % 4 === 0 ? 1.4 : .75);
+    }
+    arc(cx, cy, base * .72, base * .33, .55, Math.PI * .72, Math.PI * 1.88, 'rgba(16,45,44,.76)', 2.1);
+    arc(cx, cy, base * .52, base * .23, -.72, Math.PI * 1.08, Math.PI * 2.18, 'rgba(255,255,255,.72)', 1.6);
+    arc(cx, cy, base * .92, base * .39, .18, Math.PI * 1.2, Math.PI * 1.72, 'rgba(16,45,44,.55)', 4.2);
+
+    ctx.fillStyle = '#102d2c';
+    ctx.beginPath(); ctx.arc(cx, cy, 5.5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#a8efc0';
+    [[-.88,-.08,4], [.73,-.52,3], [.42,.74,2.5], [-.44,.63,2]].forEach(([x,y,r]) => {
+      ctx.beginPath(); ctx.arc(cx + base*x, cy + base*y, r, 0, Math.PI*2); ctx.fill();
+    });
+  };
+
+  const tick = () => {
+    pointer.x += (target.x - pointer.x) * .035;
+    pointer.y += (target.y - pointer.y) * .035;
+    draw();
+    raf = requestAnimationFrame(tick);
+  };
+  canvas.parentElement?.addEventListener('pointermove', event => {
+    if (reduced) return;
+    const rect = canvas.getBoundingClientRect();
+    target.x = Math.max(.58, Math.min(.88, (event.clientX - rect.left) / rect.width));
+    target.y = Math.max(.28, Math.min(.62, (event.clientY - rect.top) / rect.height));
+  }, { passive: true });
+  canvas.parentElement?.addEventListener('pointerleave', () => { target = { x: .73, y: .43 }; });
+  window.addEventListener('resize', resize, { passive: true });
+  resize();
+  if (!reduced) raf = requestAnimationFrame(tick);
+  window.addEventListener('pagehide', () => cancelAnimationFrame(raf), { once: true });
+}
+
+document.querySelectorAll('[data-year]').forEach(node => node.textContent = new Date().getFullYear());
+setupNavigation();
+setupPublications();
+setupLensCanvas();
+setupReveals();
