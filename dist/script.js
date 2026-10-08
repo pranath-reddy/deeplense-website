@@ -342,16 +342,27 @@ function setupLensCanvas() {
   let pointer = { x: .73, y: .43 };
   let target = { ...pointer };
   let raf = 0;
+  let resizeRaf = 0;
 
   const resize = () => {
     const rect = canvas.getBoundingClientRect();
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    dpr = Math.min(Math.max(window.devicePixelRatio || 1, 1), 3);
     width = rect.width;
     height = rect.height;
-    canvas.width = Math.round(width * dpr);
-    canvas.height = Math.round(height * dpr);
+    const pixelWidth = Math.max(1, Math.round(width * dpr));
+    const pixelHeight = Math.max(1, Math.round(height * dpr));
+    if (canvas.width !== pixelWidth) canvas.width = pixelWidth;
+    if (canvas.height !== pixelHeight) canvas.height = pixelHeight;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     draw();
+  };
+
+  const requestResize = () => {
+    cancelAnimationFrame(resizeRaf);
+    resizeRaf = requestAnimationFrame(() => {
+      resize();
+      resizeRaf = requestAnimationFrame(resize);
+    });
   };
 
   const arc = (cx, cy, rx, ry, rotation, start, end, color, lineWidth = 1) => {
@@ -405,10 +416,20 @@ function setupLensCanvas() {
     target.y = Math.max(.28, Math.min(.62, (event.clientY - rect.top) / rect.height));
   }, { passive: true });
   canvas.parentElement?.addEventListener('pointerleave', () => { target = { x: .73, y: .43 }; });
-  window.addEventListener('resize', resize, { passive: true });
-  resize();
+  const resizeObserver = 'ResizeObserver' in window ? new ResizeObserver(requestResize) : null;
+  resizeObserver?.observe(canvas);
+  window.addEventListener('resize', requestResize, { passive: true });
+  window.visualViewport?.addEventListener('resize', requestResize, { passive: true });
+  window.addEventListener('orientationchange', requestResize, { passive: true });
+  window.addEventListener('pageshow', requestResize, { passive: true });
+  document.fonts?.ready.then(requestResize);
+  requestResize();
   if (!reduced) raf = requestAnimationFrame(tick);
-  window.addEventListener('pagehide', () => cancelAnimationFrame(raf), { once: true });
+  window.addEventListener('pagehide', () => {
+    cancelAnimationFrame(raf);
+    cancelAnimationFrame(resizeRaf);
+    resizeObserver?.disconnect();
+  }, { once: true });
 }
 
 document.querySelectorAll('[data-year]').forEach(node => node.textContent = new Date().getFullYear());
