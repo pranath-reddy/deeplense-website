@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 400" role="img" aria-labelledby="title desc">
+  <title id="title">DeepLense</title>
+  <desc id="desc">The DeepLense lensing-ring mark beside the DeepLense wordmark.</desc>
+  <g fill="none" stroke="#102d2c" transform="rotate(-32 200 200)">
+    <circle cx="200" cy="200" r="136" stroke-width="25"/>
+    <path d="M259.42 259.42A84 84 0 1 1 259.42 140.58" stroke-width="14"/>
+    <circle cx="348" cy="161" r="20" fill="#102d2c" stroke="none"/>
+  </g>
+  <text x="402" y="255" fill="#102d2c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="154" font-weight="700" letter-spacing="-7">DeepLense</text>
+</svg>

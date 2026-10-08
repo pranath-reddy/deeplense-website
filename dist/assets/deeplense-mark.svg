@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">DeepLense mark</title>
+  <desc id="desc">Two offset lensing rings and a point of light.</desc>
+  <g fill="none" stroke="#102d2c" transform="rotate(-32 256 256)">
+    <circle cx="256" cy="256" r="174" stroke-width="32"/>
+    <path d="M332.37 332.37A108 108 0 1 1 332.37 179.63" stroke-width="18"/>
+    <circle cx="445" cy="206" r="26" fill="#102d2c" stroke="none"/>
+  </g>
+</svg>

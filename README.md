@@ -108,6 +108,17 @@ The HTML pages append a small version string to `styles.css` and `script.js`, fo
 
 When changing CSS or JavaScript, increment the version consistently in `index.html`, `about.html`, `research.html`, and `404.html` where applicable. This prevents visitors from receiving stale assets after a deployment.
 
+### Brand assets
+
+Reusable DeepLense logo files are stored in `dist/assets/`:
+
+- `deeplense-mark.svg` — standalone vector mark
+- `deeplense-mark.png` — standalone mark at 1024 × 1024 pixels
+- `deeplense-logo.svg` — horizontal vector mark and wordmark
+- `deeplense-logo.png` — horizontal lockup at 2800 × 800 pixels
+
+All four files use a transparent background and the website's forest color (`#102d2c`). Prefer SVG for websites, documents, and large-format output; use PNG when an application does not support SVG.
+
 ## Quality checklist
 
 Before publishing:
