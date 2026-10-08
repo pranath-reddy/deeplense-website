@@ -6,7 +6,7 @@ const publications = [
     summary: "Task-aware joint-embedding learning with exact D4 correspondence and arc-weighted radial consistency.",
     tags: ["representations", "physics", "dark-matter"],
     labels: ["Self-supervision", "D4 symmetry", "Simulated"],
-    href: "papers/pranath/54_Lens_LeJEPA_Learning_the_Ri%20(1).pdf"
+    href: "papers/54_Lens_LeJEPA_Learning_the_Ri%20(1).pdf"
   },
   {
     year: 2026,
@@ -15,7 +15,7 @@ const publications = [
     summary: "A controlled hybrid model that refines orbit-averaged classical features without claiming quantum advantage.",
     tags: ["physics", "dark-matter"],
     labels: ["Quantum-classical", "Equivariance", "Simulated"],
-    href: "papers/pranath/FSS-26_Paper_XXX_8741.pdf"
+    href: "papers/FSS-26_Paper_XXX_8741.pdf"
   },
   {
     year: 2026,
@@ -24,7 +24,7 @@ const publications = [
     summary: "Selected for a spotlight talk at the AAAI Fall Symposium; typed agents connect lens simulation, architecture search, evaluation, and experiment planning.",
     tags: ["agents", "dark-matter"],
     labels: ["AAAI Spotlight", "Agents", "Auditable workflow"],
-    href: "papers/pranath/FSS-26_Paper_XXX_2415%20(1).pdf"
+    href: "papers/FSS-26_Paper_XXX_2415%20(1).pdf"
   },
   {
     year: 2026,
@@ -42,7 +42,7 @@ const publications = [
     summary: "An interpretability study of late hidden-state signals linking generated reasoning traces to final answers.",
     tags: ["representations"],
     labels: ["Interpretability", "Diffusion LMs", "Broader AI"],
-    href: "papers/pranath/123_Trace_Answer_Compatibility.pdf"
+    href: "papers/123_Trace_Answer_Compatibility.pdf"
   },
   {
     year: 2025,
@@ -190,7 +190,7 @@ const people = [
   { initials: "KG", name: "Karthik Gaur", affiliation: "UA", focus: "Foundation models and physics-guided learning for gravitational lensing.", links: [["GitHub", "https://github.com/Karthikgaur8"]] },
   { initials: "AB", name: "Arnesh Batra", affiliation: "IIIT Delhi", focus: "JEPA-based foundation models for astronomy and strong lensing.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
   { initials: "RS", name: "Rajat Shinde", affiliation: "UAH", focus: "Hybrid quantum-classical representation learning and agentic systems.", links: [["Publications", "https://arxiv.org/search/?query=Rajat+Shinde&searchtype=author"]] },
-  { initials: "SR", name: "Sushmanth Reddy", affiliation: "Cisco", focus: "D4-equivariant hybrid quantum-classical lens classification.", links: [["Research", "papers/pranath/FSS-26_Paper_XXX_8741.pdf"]] },
+  { initials: "SR", name: "Sushmanth Reddy", affiliation: "Cisco", focus: "D4-equivariant hybrid quantum-classical lens classification.", links: [["Research", "papers/FSS-26_Paper_XXX_8741.pdf"]] },
   { initials: "LP", name: "Lucca Paris", affiliation: "Brown", focus: "Survey-scale data processing and pipeline development for LSST.", links: [["Project", "https://ml4sci.org/gsoc/2026/proposal_DEEPLENSE7.html"]] },
   { initials: "AS", name: "Aatmaj Amol Salunke", affiliation: "NEU", focus: "Agentic AI for autonomous gravitational-lensing simulation workflows.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
   { initials: "MA", name: "Mywish Anand", affiliation: "IIT Madras", focus: "Scientific agents and autonomous gravitational-lensing workflows.", links: [["LinkedIn", "https://in.linkedin.com/in/mywishanand"]] },

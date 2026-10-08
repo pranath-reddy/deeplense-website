@@ -79,7 +79,7 @@ When a paper has no public record yet:
 
 1. Place the PDF in the appropriate folder under `dist/papers/`.
 2. Add its metadata and local path to the `publications` array.
-3. Use a path relative to `dist/`, such as `papers/pranath/example-paper.pdf`.
+3. Use a path relative to `dist/`, such as `papers/example-paper.pdf`.
 4. Replace the local path with a public URL once an authoritative record becomes available, then remove the redundant PDF from the repository.
 
 The publication filters on the Research page are derived from the record tags, so use the existing tag vocabulary when possible.
