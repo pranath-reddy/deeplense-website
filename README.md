@@ -21,7 +21,7 @@ The website is intentionally simple and build-free. It uses plain HTML, CSS, and
 .
 ├── .github/workflows/deploy-pages.yml  # GitHub Pages deployment
 ├── dist/
-│   ├── index.html                      # Redirect from the domain root to /home/
+│   ├── index.html                      # Redirect from the domain root to /home
 │   ├── home/index.html                 # Homepage, featured research, and news
 │   ├── about/index.html                # Mission, team, support, and contact
 │   ├── research/index.html             # Publication index and filters
