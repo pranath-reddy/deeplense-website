@@ -29,7 +29,7 @@ const publications = [
   {
     year: 2026,
     title: "DLens: Closed-Loop AI Agents for Parsimonious Scientific Machine Learning",
-    authors: "Aatmaj Amol Salunke, Mywish Anand, Pranath Reddy Kumbam, Michael W. Toomey & Sergei V. Gleyzer",
+    authors: "Aatmaj Amol Salunke, Mywish Anand, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Selected for a spotlight talk at the AAAI Fall Symposium; typed agents connect lens simulation, architecture search, evaluation, and experiment planning.",
     tags: ["agents", "dark-matter"],
     labels: ["AAAI Spotlight", "Agents", "Auditable workflow"],
@@ -65,7 +65,7 @@ const publications = [
   {
     year: 2025,
     title: "Lens-JEPA: Physics-Informed Joint Embedding Predictive Architecture for Gravitational Lensing",
-    authors: "J Rishi, Pranath Reddy Kumbam, Michael W. Toomey & Sergei Gleyzer",
+    authors: "J Rishi, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Joint-embedding predictive learning paired with a lens-equation physical encoder.",
     tags: ["representations", "physics", "dark-matter"],
     labels: ["JEPA", "Foundation models", "Simulated"],
@@ -74,7 +74,7 @@ const publications = [
   {
     year: 2025,
     title: "HEAL-PINN: Physics-Informed Swin Transformer for Sparse Lensing Data",
-    authors: "Dhruv Srivastava, Pranath Reddy Kumbam, Michael W. Toomey & Sergei Gleyzer",
+    authors: "Dhruv Srivastava, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Geometry-aware windows and lens-equation encoding for sparse-data morphology classification.",
     tags: ["physics", "dark-matter"],
     labels: ["Swin Transformer", "PINN", "Sparse data"],
@@ -110,7 +110,7 @@ const publications = [
   {
     year: 2024,
     title: "LensPINN: Physics-Informed Neural Network for Learning Dark Matter Morphology in Lensing",
-    authors: "Ashutosh Ojha, Sergei Gleyzer, Michael W. Toomey & Pranath Reddy Kumbam",
+    authors: "Ashutosh Ojha, Sergei Gleyzer, Michael W. Toomey & Pranath Reddy",
     summary: "A ViT physical encoder and lens-equation inversion improve compact morphology classifiers.",
     tags: ["physics", "dark-matter"],
     labels: ["PINN", "Vision Transformer", "Simulated"],
