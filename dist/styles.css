@@ -78,7 +78,7 @@ img { display: block; max-width: 100%; }
 .brand { display: inline-flex; align-items: center; gap: 10px; width: fit-content; font-weight: 680; letter-spacing: -.02em; }
 .brand-mark { position: relative; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--forest); transform: rotate(-32deg); }
 .brand-mark::after { content: ""; position: absolute; inset: 4px; border: 1px solid var(--forest); border-right-color: transparent; border-radius: 50%; }
-.brand-mark i { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: var(--forest); right: -5px; top: 12px; }
+.brand-mark i { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: var(--forest); right: -3px; top: 8px; }
 .site-nav { display: flex; align-items: center; gap: 6px; }
 .site-nav a { padding: 9px 13px; border-radius: 10px; color: #4a5a57; font-size: 14px; transition: color .2s, background .2s, transform .12s; }
 .site-nav a:hover, .site-nav a.active { color: var(--ink); background: rgba(16, 45, 44, .06); }
