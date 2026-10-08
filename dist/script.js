@@ -21,9 +21,9 @@ const publications = [
     year: 2026,
     title: "DLens: Closed-Loop AI Agents for Parsimonious Scientific Machine Learning",
     authors: "DeepLense collaboration",
-    summary: "Typed scientific agents connect lens simulation, architecture search, evaluation, and experiment planning.",
+    summary: "Selected for a spotlight talk at the AAAI Fall Symposium; typed agents connect lens simulation, architecture search, evaluation, and experiment planning.",
     tags: ["agents", "dark-matter"],
-    labels: ["Agents", "Architecture search", "Auditable workflow"],
+    labels: ["AAAI Spotlight", "Agents", "Auditable workflow"],
     href: "papers/pranath/FSS-26_Paper_XXX_2415%20(1).pdf"
   },
   {
@@ -181,6 +181,39 @@ const publications = [
   }
 ];
 
+const people = [
+  { initials: "MT", name: "Michael Toomey", affiliation: "MIT", focus: "Cosmology, simulation, and physics-informed machine learning.", lead: true, links: [["Website", "https://michael-toomey.com/"], ["GitHub", "https://github.com/mwt5345"]] },
+  { initials: "PR", name: "Pranath Reddy", affiliation: "Independent Researcher", focus: "Generative models, super-resolution, scientific agents, and open-source mentorship.", lead: true, links: [["GitHub", "https://github.com/pranath-reddy"], ["Scholar", "https://scholar.google.com/citations?user=sq-LU5kAAAAJ&hl=en"]] },
+  { initials: "AP", name: "Anna Parul", affiliation: "Paris Observatory", focus: "Real-lens discovery and the transfer from simulations to sky surveys.", lead: true, links: [["Publications", "https://arxiv.org/search/?query=Hanna+Parul&searchtype=author"]] },
+  { initials: "AO", name: "Ashutosh Ojha", affiliation: "IIT Dhanbad", focus: "Physics-guided learning, interpretable models, and real lensing data.", links: [["GitHub", "https://github.com/ML4SCI/DeepLense/tree/main/DeepLense_Physics_Informed_Neural_Network_for_Dark_Matter_Morphology_Ashutosh_Ojha"]] },
+  { initials: "HS", name: "Hamees Sayed", affiliation: "Smallest AI", focus: "FlowLensing, neural-operator simulation, and scientific image generation.", links: [["Website", "https://hamees-sayed.github.io/"], ["Hugging Face", "https://huggingface.co/hamees"]] },
+  { initials: "KG", name: "Karthik Gaur", affiliation: "UA", focus: "Foundation models and physics-guided learning for gravitational lensing.", links: [["GitHub", "https://github.com/Karthikgaur8"]] },
+  { initials: "AB", name: "Arnesh Batra", affiliation: "IIIT Delhi", focus: "WaveLens-JEPA, a foundation model for gravitational lensing.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
+  { initials: "RS", name: "Rajat Shinde", affiliation: "UAH", focus: "Particle astrophysics and hybrid quantum-classical representation learning.", links: [["Publications", "https://arxiv.org/search/?query=Rajat+Shinde&searchtype=author"]] },
+  { initials: "SR", name: "Sushmanth Reddy", affiliation: "Cisco", focus: "D4-equivariant hybrid quantum-classical lens classification.", links: [["Research", "papers/pranath/FSS-26_Paper_XXX_8741.pdf"]] },
+  { initials: "LP", name: "Lucca Paris", affiliation: "Brown", focus: "Survey-scale data processing and pipeline development for LSST.", links: [["Project", "https://ml4sci.org/gsoc/2026/proposal_DEEPLENSE7.html"]] },
+  { initials: "AS", name: "Aatmaj Amol Salunke", affiliation: "NEU", focus: "Agentic AI for autonomous gravitational-lensing simulation workflows.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
+  { initials: "MA", name: "Mywish Anand", affiliation: "IIT Madras", focus: "Scientific agents and autonomous gravitational-lensing workflows.", links: [["LinkedIn", "https://in.linkedin.com/in/mywishanand"]] },
+  { initials: "PB", name: "Paras Balani", affiliation: "BITS Pilani", focus: "Neural operators for fast simulation of strong gravitational lensing.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
+  { initials: "PU", name: "Prajwal Uday", affiliation: "RWTH Aachen University", focus: "Physics-informed unsupervised super-resolution of strong-lensing images.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
+  { initials: "JC", name: "Jen-Yu Chang", affiliation: "NYCU, Taiwan", focus: "Hybrid quantum-classical representation learning for dark-matter substructure.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
+  { initials: "BC", name: "Bryan Chen", affiliation: "Ecole Polytechnique", focus: "Physics-guided machine learning for gravitational lensing.", links: [["GitHub", "https://github.com/BryanBradfo"]] },
+  { initials: "DS", name: "Dhruv Srivastava", affiliation: "UIUC", focus: "HEAL-PINN, sparse-data learning, and gravitational-lens finding.", links: [["Research", "papers/pranath/2025_heal-pinn_neurips-workshop.pdf"]] },
+  { initials: "KM", name: "Kartik Mandar", affiliation: "University of Catania", focus: "DeepLense data-processing pipelines for LSST-scale observations.", links: [["Website", "https://www.kartikmandar.com/"]] },
+  { initials: "SN", name: "Susmit Neogi", affiliation: "IIT Bombay", focus: "Physics-guided machine learning on real gravitational-lensing images.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
+  { initials: "MJ", name: "Michael Jiao", affiliation: "Harvard", focus: "Machine learning for gravitational-lens finding.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] }
+];
+
+const cohort2026 = [
+  ["Aatmaj Amol Salunke", "Agentic AI for autonomous gravitational-lensing simulation workflows"],
+  ["Arnesh Batra", "WaveLens-JEPA: a foundation model for gravitational lensing"],
+  ["Jen-Yu Chang", "Hybrid quantum-classical representation learning for dark-matter substructure"],
+  ["Michael Jiao", "Machine learning for gravitational-lens finding"],
+  ["Paras Balani", "Neural operators for fast simulation of strong gravitational lensing"],
+  ["Prajwal Uday", "Physics-informed unsupervised super-resolution of strong-lensing images"],
+  ["Susmit Neogi", "Physics-guided machine learning on real gravitational-lensing images"]
+];
+
 function setupNavigation() {
   const header = document.querySelector('[data-header]');
   const toggle = document.querySelector('[data-nav-toggle]');
@@ -217,6 +250,25 @@ function setupReveals() {
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
   items.forEach(item => observer.observe(item));
+}
+
+function setupPeople() {
+  const grid = document.querySelector('[data-people-grid]');
+  if (grid) {
+    grid.innerHTML = people.map((person, index) => {
+      const links = person.links.map(([label, href]) => `<a href="${href}"${href.startsWith('http') ? ' target="_blank" rel="noreferrer"' : ''}>${label} ↗</a>`).join('');
+      const leadMark = person.lead ? '<span class="lead-mark" title="Research lead"><span class="sr-only">Research lead</span></span>' : '';
+      return `<article class="person-card${person.lead ? ' lead-card' : ''} reveal" data-delay="${index % 3}">
+        <div class="mini-monogram">${person.initials}</div>
+        <div class="person-info"><p class="role">${person.affiliation}</p><h3>${person.name}${leadMark}</h3><p>${person.focus}</p><div class="person-links">${links}</div></div>
+      </article>`;
+    }).join('');
+  }
+
+  const cohort = document.querySelector('[data-cohort-list]');
+  if (cohort) {
+    cohort.innerHTML = cohort2026.map(([name, project], index) => `<article class="cohort-item reveal" data-delay="${index % 4}"><span>${String(index + 1).padStart(2, '0')}</span><div><p>Contributor · ${name}</p><h3>${project}</h3></div></article>`).join('');
+  }
 }
 
 function publicationMarkup(paper) {
@@ -352,5 +404,6 @@ function setupLensCanvas() {
 document.querySelectorAll('[data-year]').forEach(node => node.textContent = new Date().getFullYear());
 setupNavigation();
 setupPublications();
+setupPeople();
 setupLensCanvas();
 setupReveals();

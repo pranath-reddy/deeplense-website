@@ -126,6 +126,13 @@ img { display: block; max-width: 100%; }
 .scroll-cue { position: absolute; z-index: 2; left: 26px; bottom: 36px; display: flex; align-items: center; gap: 12px; transform: rotate(-90deg) translateX(100%); transform-origin: left bottom; font-size: 10px; text-transform: uppercase; letter-spacing: .16em; }
 .scroll-cue i { width: 56px; height: 1px; background: var(--ink); }
 
+.spotlight-banner { width: min(calc(100% - 48px), var(--max)); min-height: 86px; margin: 26px auto 0; padding: 20px 24px; display: grid; grid-template-columns: 1fr 1.45fr auto; align-items: center; gap: 30px; border: 1px solid rgba(16,45,44,.18); border-radius: 17px; background: var(--forest); color: var(--white); transition: transform .2s var(--ease), box-shadow .2s; }
+.spotlight-banner:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.spotlight-label { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.66); font: 550 10px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .07em; text-transform: uppercase; }
+.spotlight-label i { width: 7px; height: 7px; border-radius: 50%; background: var(--sun); box-shadow: 0 0 0 5px rgba(244,240,168,.1); }
+.spotlight-banner strong { font-size: 20px; line-height: 1.2; letter-spacing: -.025em; }
+.spotlight-link { font-size: 12px; font-weight: 650; white-space: nowrap; }
+
 .section { width: min(calc(100% - 48px), var(--max)); margin-inline: auto; padding-block: 126px; }
 .section-kicker { margin: 0; color: var(--muted); font: 600 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .1em; text-transform: uppercase; }
 .intro-section { display: grid; grid-template-columns: 1fr 2.1fr; gap: 60px; }
@@ -193,6 +200,7 @@ img { display: block; max-width: 100%; }
 .paper-feature.dark { background: var(--forest); color: var(--white); }
 .feature-meta { position: relative; z-index: 2; display: flex; justify-content: space-between; color: var(--muted); font: 500 11px ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .06em; }
 .dark .feature-meta { color: rgba(255,255,255,.62); }
+.spotlight-chip { width: fit-content; padding: 6px 9px; border: 1px solid rgba(244,240,168,.34); border-radius: 999px; background: rgba(244,240,168,.1); color: var(--sun); }
 .paper-feature h3 { position: relative; z-index: 2; margin: auto 0 12px; font-size: clamp(32px, 4vw, 56px); line-height: .98; letter-spacing: -.055em; }
 .paper-feature p { position: relative; z-index: 2; max-width: 590px; margin: 0; color: var(--muted); font-size: 15px; }
 .paper-feature.dark p { color: rgba(255,255,255,.67); }
@@ -326,15 +334,18 @@ img { display: block; max-width: 100%; }
 .person-info { display: flex; flex-direction: column; }
 .person-info .role { margin: 0 0 22px; color: var(--muted); font: 500 10px ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .05em; }
 .person-info h3 { margin: 0 0 12px; font-size: 28px; line-height: 1.05; letter-spacing: -.04em; }
+.person-info h3 .lead-mark { display: inline-block; width: 7px; height: 7px; margin: 0 0 3px 7px; border-radius: 50%; background: #31a962; box-shadow: 0 0 0 4px rgba(49,169,98,.09); }
 .person-info > p:not(.role) { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
 .person-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: auto; padding-top: 22px; }
 .person-links a { font-size: 12px; font-weight: 650; }
 .person-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .people-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .people-grid .person-card { min-height: 300px; display: flex; flex-direction: column; }
+.people-grid .lead-card { border-color: rgba(49,169,98,.24); }
 .mini-monogram { width: 52px; height: 52px; display: grid; place-items: center; margin-bottom: 40px; border-radius: 50%; background: var(--paper-2); color: var(--forest); font: 600 13px ui-monospace, SFMono-Regular, Menlo, monospace; }
 .people-grid .person-info { flex: 1; }
 .people-grid .person-info h3 { font-size: 21px; }
+.noscript-note { color: var(--muted); }
 .cohort-section { display: grid; grid-template-columns: 1fr 1.35fr; gap: 90px; padding: 80px; border-radius: var(--radius); background: var(--forest); color: var(--white); }
 .cohort-intro { align-self: start; position: sticky; top: 100px; }
 .cohort-intro .section-kicker { color: rgba(255,255,255,.55); margin-bottom: 22px; }
@@ -409,6 +420,7 @@ img { display: block; max-width: 100%; }
   .hero h1, .page-hero h1 { font-size: clamp(52px, 16vw, 74px); }
   .hero-lede { font-size: 17px; }
   .hero-caption { left: 24px; right: 24px; bottom: 28px; width: auto; }
+  .spotlight-banner { width: min(calc(100% - 32px), var(--max)); grid-template-columns: 1fr; gap: 9px; padding: 20px; }
   .scroll-cue { display: none; }
   .hero-actions { align-items: stretch; }
   .button { flex: 1 1 auto; }
