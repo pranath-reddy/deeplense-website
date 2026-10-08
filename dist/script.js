@@ -11,7 +11,7 @@ const publications = [
   {
     year: 2026,
     title: "Lens-LeJEPA: Learning the Right Invariances for Strong Gravitational Lenses",
-    authors: "DeepLense collaboration",
+    authors: "Arnesh Batra, Karthik Gaur, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Task-aware joint-embedding learning with exact D4 correspondence and arc-weighted radial consistency.",
     tags: ["representations", "physics", "dark-matter"],
     labels: ["Self-supervision", "D4 symmetry", "Simulated"],
@@ -29,7 +29,7 @@ const publications = [
   {
     year: 2026,
     title: "DLens: Closed-Loop AI Agents for Parsimonious Scientific Machine Learning",
-    authors: "DeepLense collaboration",
+    authors: "Aatmaj Amol Salunke, Mywish Anand, Pranath Reddy Kumbam, Michael W. Toomey & Sergei V. Gleyzer",
     summary: "Selected for a spotlight talk at the AAAI Fall Symposium; typed agents connect lens simulation, architecture search, evaluation, and experiment planning.",
     tags: ["agents", "dark-matter"],
     labels: ["AAAI Spotlight", "Agents", "Auditable workflow"],
@@ -47,7 +47,7 @@ const publications = [
   {
     year: 2026,
     title: "Trace–Answer Compatibility Emerges at Depth and Mediates Prediction in Diffusion Language Models",
-    authors: "Anonymous review copy",
+    authors: "Ashutosh Ojha, Pranath Reddy & Sergei Gleyzer",
     summary: "An interpretability study of late hidden-state signals linking generated reasoning traces to final answers.",
     tags: ["representations"],
     labels: ["Interpretability", "Diffusion LMs", "Broader AI"],
