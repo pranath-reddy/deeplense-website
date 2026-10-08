@@ -2,12 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <meta http-equiv="refresh" content="0; url=/about">
+  <meta name="theme-color" content="#f4f6f2">
+  <meta name="description" content="Meet the DeepLense researchers and learn about our open-source mission, community, and support.">
   <link rel="canonical" href="https://deeplense.org/about">
-  <title>Redirecting to DeepLense People &amp; About</title>
-  <script>window.location.replace('/about');</script>
+  <script>if (/^(www\.)?deeplense\.org$/.test(window.location.hostname) && window.location.pathname.endsWith('/about.html')) window.location.replace('/about');</script>
+  <title>People &amp; About — DeepLense</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261008d">
+  <script src="script.js?v=20261008g" defer></script>
 </head>
-<body><p>Continue to <a href="/about">DeepLense People &amp; About</a>.</p></body>
+<body>
+  <a class="skip-link" href="/about#content">Skip to content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="/home" aria-label="DeepLense home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>DeepLense</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Primary navigation" data-nav><a href="/home">Home</a><a href="/research">Research</a><a class="active" href="/about">People &amp; About</a><a href="/home#news">News</a></nav>
+    <a class="header-cta" href="https://github.com/ML4SCI/DeepLense" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="content">
+    <section class="page-hero about-hero">
+      <div class="page-hero-index" aria-hidden="true">D</div>
+      <div class="reveal">
+        <p class="eyebrow"><span class="pulse-dot"></span> Distributed by design</p>
+        <h1>Open science for<br><em>an unseen universe.</em></h1>
+      </div>
+      <p class="page-hero-lede reveal" data-delay="1">DeepLense is a distributed, open-source research group connecting physics, astronomy, and machine learning across institutions and career stages.</p>
+    </section>
+
+    <section class="section about-statement">
+      <p class="section-kicker reveal">Our mission</p>
+      <div class="about-statement-grid">
+        <h2 class="reveal">Make advanced scientific AI <span>open, rigorous, and useful.</span></h2>
+        <div class="reveal" data-delay="1">
+          <p>We focus on strong gravitational lensing and dark-matter studies, while developing methods that matter across scientific machine learning: physical priors, limited labels, domain shift, generative models, and verifiable agents.</p>
+          <p>DeepLense is part of <a href="https://ml4sci.org/" target="_blank" rel="noreferrer">ML4SCI</a>, the nonprofit open-source umbrella that brings together researchers and contributors to apply machine learning to frontier problems in science.</p>
+        </div>
+      </div>
+      <div class="values-row" role="list">
+        <div class="reveal" role="listitem"><span>01</span><strong>Open by default</strong><p>Code, datasets, and research artifacts designed for reuse.</p></div>
+        <div class="reveal" data-delay="1" role="listitem"><span>02</span><strong>Evidence over spectacle</strong><p>Clear experimental boundaries and honest negative results.</p></div>
+        <div class="reveal" data-delay="2" role="listitem"><span>03</span><strong>Mentorship as infrastructure</strong><p>Research grows through sustained, hands-on open-source collaboration.</p></div>
+      </div>
+    </section>
+
+    <section class="section people-section" aria-labelledby="people-heading">
+      <div class="section-heading reveal"><div><p class="section-kicker">People</p><h2 id="people-heading">A small core, a wide orbit.</h2></div><p>Mentors and collaborators span astrophysics, fundamental physics, and machine learning.</p></div>
+
+      <h3 class="people-subhead reveal">Principal investigators</h3>
+      <div class="pi-grid">
+        <article class="person-card person-feature reveal">
+          <div class="person-monogram" aria-hidden="true"><span>SG</span><i></i></div>
+          <div class="person-info"><p class="role">Principal Investigator · University of Alabama</p><h3>Sergei Gleyzer</h3><p>Particle physicist and founder of ML4SCI. Leads work at the intersection of artificial intelligence, dark matter, and open scientific education.</p><div class="person-links"><a href="https://physics.ua.edu/people/sergei-gleyzer/" target="_blank" rel="noreferrer">Profile ↗</a><a href="https://orcid.org/0000-0002-6222-8102" target="_blank" rel="noreferrer">ORCID ↗</a></div></div>
+        </article>
+        <article class="person-card person-feature reveal" data-delay="1">
+          <div class="person-monogram cool" aria-hidden="true"><span>SA</span><i></i></div>
+          <div class="person-info"><p class="role">Principal Investigator · Brown University</p><h3>Stephon Alexander</h3><p>Theoretical physicist working across cosmology, quantum gravity, machine learning, and the foundational questions that connect them.</p><div class="person-links"><a href="https://vivo.brown.edu/display/salexan4" target="_blank" rel="noreferrer">Profile ↗</a><a href="https://physics.brown.edu/about/people/faculty" target="_blank" rel="noreferrer">Department ↗</a></div></div>
+        </article>
+      </div>
+
+      <h3 class="people-subhead reveal">Research team</h3>
+      <div class="people-grid" data-people-grid></div>
+      <noscript><p class="noscript-note">Enable JavaScript to view the full research-team directory.</p></noscript>
+    </section>
+
+    <section class="section cohort-section" aria-labelledby="cohort-heading">
+      <div class="cohort-intro reveal"><p class="section-kicker">Google Summer of Code 2026</p><h2 id="cohort-heading">The current contributor cohort.</h2><p>Seven projects extend the program from real-lens finding to foundation models, quantum representations, neural operators, super-resolution, and agentic simulation.</p><a class="inline-link light" href="https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci" target="_blank" rel="noreferrer">Official GSoC listing ↗</a></div>
+      <div class="cohort-list" data-cohort-list></div>
+    </section>
+
+    <section class="section support-section" aria-labelledby="support-heading">
+      <div class="section-heading reveal"><div><p class="section-kicker">Support</p><h2 id="support-heading">Research needs an ecosystem.</h2></div><p>DeepLense combines public research support, institutional collaboration, and sustained open-source mentorship.</p></div>
+      <div class="support-grid">
+        <article class="support-card nsf reveal"><span class="support-mark">NSF</span><div><p class="label">National Science Foundation</p><h3>SLINGSHOT</h3><p>“Decoding Dark Matter through Gravitational Lensing” supports simulation, anomaly detection, property inference, and open astronomical tooling.</p><dl><div><dt>Award</dt><dd>2108645</dd></div><div><dt>Awarded</dt><dd>$371,954</dd></div><div><dt>Program</dt><dd>2021—2026</dd></div></dl></div></article>
+        <article class="support-card reveal" data-delay="1"><img src="assets/gsoc.png" alt="Google Summer of Code"><div><p class="label">Open-source mentorship</p><h3>Google Summer of Code</h3><p>DeepLense has grown through multi-year, mentored projects that turn public code into publishable scientific work.</p></div></article>
+        <article class="support-card ua-card reveal" data-delay="2"><img src="assets/ua-wordmark.svg" alt="The University of Alabama"><div><p class="label">Institutional home</p><h3>The University of Alabama</h3><p>Support from Physics &amp; Astronomy connects the program to teaching, research, and the broader SLINGSHOT collaboration.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-orbit" aria-hidden="true"><span></span></div>
+      <div class="reveal"><p class="section-kicker">Join the work</p><h2>Start with the science.<br>Stay for the community.</h2></div>
+      <div class="reveal" data-delay="1"><p>The fastest way into DeepLense is through the open repository: reproduce a result, improve the pipeline, or take on a documented research task. For collaborations, questions, or contributor inquiries, email <a class="inline-link" href="mailto:ml4-sci@cern.ch">ml4-sci@cern.ch</a>.</p><div class="hero-actions"><a class="button primary" href="mailto:ml4-sci@cern.ch">Email us ↗</a><a class="button secondary" href="https://github.com/ML4SCI/DeepLense" target="_blank" rel="noreferrer">Open GitHub ↗</a><a class="button text-button" href="https://ml4sci.org/" target="_blank" rel="noreferrer">Visit ML4SCI ↗</a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="/home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>DeepLense</span></a>
+    <p>An open-source research group within ML4SCI.</p>
+    <div class="footer-links"><a href="/home">Home</a><a href="/research">Research</a><a href="mailto:ml4-sci@cern.ch">ml4-sci@cern.ch</a><a href="https://ml4sci.org/" target="_blank" rel="noreferrer">ML4SCI ↗</a></div>
+    <p class="copyright">© <span data-year></span> DeepLense · Built for open science.</p>
+  </footer>
+</body>
 </html>
