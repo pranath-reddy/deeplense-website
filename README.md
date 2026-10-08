@@ -21,9 +21,13 @@ The website is intentionally simple and build-free. It uses plain HTML, CSS, and
 .
 ├── .github/workflows/deploy-pages.yml  # GitHub Pages deployment
 ├── dist/
-│   ├── index.html                      # Homepage, featured research, and news
-│   ├── about.html                      # Mission, team, support, and contact
-│   ├── research.html                   # Publication index and filters
+│   ├── index.html                      # Redirect from the domain root to /home/
+│   ├── home/index.html                 # Homepage, featured research, and news
+│   ├── about/index.html                # Mission, team, support, and contact
+│   ├── research/index.html             # Publication index and filters
+│   ├── home.html                       # Legacy clean-route redirect
+│   ├── about.html                      # Legacy .html redirect
+│   ├── research.html                   # Legacy .html redirect
 │   ├── 404.html                        # Custom not-found page
 │   ├── script.js                       # Publications, people, cohort, and UI behavior
 │   ├── styles.css                      # Design system and responsive layout
@@ -40,7 +44,7 @@ From the repository root, start a static server:
 python3 -m http.server 4173 --directory dist
 ```
 
-Then open [http://127.0.0.1:4173](http://127.0.0.1:4173). Stop the server with `Ctrl+C`.
+Then open [http://127.0.0.1:4173/home/](http://127.0.0.1:4173/home/). Stop the server with `Ctrl+C`.
 
 Opening the HTML files directly with a `file://` URL is not recommended because browser behavior can differ from the deployed site.
 
@@ -62,7 +66,7 @@ Edit the `people` array in `dist/script.js`. Each entry supplies the person's na
 
 Add `lead: true` only when the subtle **Research lead** marker should appear.
 
-Principal investigators are maintained directly in `dist/about.html` because their cards contain longer biographies and multiple profile links.
+Principal investigators are maintained directly in `dist/about/index.html` because their cards contain longer biographies and multiple profile links.
 
 ### Publications
 
@@ -86,13 +90,13 @@ The publication filters on the Research page are derived from the record tags, s
 
 ### GSoC cohort
 
-Edit `cohort2026` in `dist/script.js` to update the current contributor cohort. If the program year changes, update both the array name and the associated headings and links in `dist/about.html` and `dist/index.html`.
+Edit `cohort2026` in `dist/script.js` to update the current contributor cohort. If the program year changes, update both the array name and the associated headings and links in `dist/about/index.html` and `dist/home/index.html`.
 
 ### Homepage, news, partners, and contact
 
-- Homepage copy, featured papers, news, and partner links: `dist/index.html`
-- Mission, principal investigators, funding, and contact: `dist/about.html`
-- Research-page framing and methodology notes: `dist/research.html`
+- Homepage copy, featured papers, news, and partner links: `dist/home/index.html`
+- Mission, principal investigators, funding, and contact: `dist/about/index.html`
+- Research-page framing and methodology notes: `dist/research/index.html`
 - Shared footer contact email: all three main HTML pages
 
 The current public contact address is [ml4-sci@cern.ch](mailto:ml4-sci@cern.ch).
@@ -106,7 +110,7 @@ The HTML pages append a small version string to `styles.css` and `script.js`, fo
 <script src="script.js?v=20261008b" defer></script>
 ```
 
-When changing CSS or JavaScript, increment the version consistently in `index.html`, `about.html`, `research.html`, and `404.html` where applicable. This prevents visitors from receiving stale assets after a deployment.
+When changing CSS or JavaScript, increment the version consistently in `home/index.html`, `about/index.html`, `research/index.html`, and `404.html` where applicable. This prevents visitors from receiving stale assets after a deployment.
 
 ### Brand assets
 
