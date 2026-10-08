@@ -33,7 +33,7 @@ const publications = [
     summary: "A bounded-memory study of learned retention under clean and noisy long-horizon agent experience.",
     tags: ["agents"],
     labels: ["LLM agents", "Memory", "Broader AI"],
-    href: "papers/pranath/2026_selective-memory-retention_icml-workshop.pdf"
+    href: "https://arxiv.org/abs/2606.29178"
   },
   {
     year: 2026,
@@ -51,7 +51,7 @@ const publications = [
     summary: "Fast, controllable generation of strong-lensing images across discrete classes and continuous parameters.",
     tags: ["generation", "dark-matter"],
     labels: ["Flow matching", "Simulation", "Conditional generation"],
-    href: "papers/pranath/2025_flowlensing_neurips-workshop.pdf"
+    href: "https://arxiv.org/abs/2510.07878"
   },
   {
     year: 2025,
@@ -60,7 +60,7 @@ const publications = [
     summary: "Joint-embedding predictive learning paired with a lens-equation physical encoder.",
     tags: ["representations", "physics", "dark-matter"],
     labels: ["JEPA", "Foundation models", "Simulated"],
-    href: "papers/pranath/2025_lens-jepa_neurips-workshop.pdf"
+    href: "https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_340.pdf"
   },
   {
     year: 2025,
@@ -69,7 +69,7 @@ const publications = [
     summary: "Geometry-aware windows and lens-equation encoding for sparse-data morphology classification.",
     tags: ["physics", "dark-matter"],
     labels: ["Swin Transformer", "PINN", "Sparse data"],
-    href: "papers/pranath/2025_heal-pinn_neurips-workshop.pdf"
+    href: "https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_252.pdf"
   },
   {
     year: 2025,
@@ -78,7 +78,7 @@ const publications = [
     summary: "A direct test of whether better-looking reconstructions also improve downstream physical estimates.",
     tags: ["generation", "dark-matter"],
     labels: ["Super-resolution", "LSST-like", "Scientific utility"],
-    href: "papers/pranath/2025_simulation-to-survey_neurips-workshop.pdf"
+    href: "https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_317.pdf"
   },
   {
     year: 2025,
@@ -87,7 +87,7 @@ const publications = [
     summary: "Simulation-to-observation transfer for rare lens discovery in real Hyper Suprime-Cam data.",
     tags: ["dark-matter", "representations"],
     labels: ["Domain adaptation", "Real observations", "Lens finding"],
-    href: "papers/pranath/2025_domain-adaptation-lens-finding_journal-preprint.pdf"
+    href: "https://doi.org/10.3847/1538-4357/adee16"
   },
   {
     year: 2024,
@@ -96,7 +96,7 @@ const publications = [
     summary: "Conditional diffusion for enhancing low-resolution lensing images while preserving fine morphology.",
     tags: ["generation", "dark-matter"],
     labels: ["Diffusion", "Super-resolution", "Mixed data"],
-    href: "papers/pranath/2024_difflense_journal-preprint.pdf"
+    href: "https://doi.org/10.1088/2632-2153/ad76f8"
   },
   {
     year: 2024,
@@ -105,7 +105,7 @@ const publications = [
     summary: "A ViT physical encoder and lens-equation inversion improve compact morphology classifiers.",
     tags: ["physics", "dark-matter"],
     labels: ["PINN", "Vision Transformer", "Simulated"],
-    href: "papers/pranath/2024_lenspinn_neurips-workshop.pdf"
+    href: "https://ml4physicalsciences.github.io/2024/files/NeurIPS_ML4PS_2024_78.pdf"
   },
   {
     year: 2024,
@@ -114,7 +114,7 @@ const publications = [
     summary: "Adaptive loop unrolling learns from sparse pairs when the observing operator is not exactly known.",
     tags: ["generation", "physics"],
     labels: ["Semi-supervision", "Inverse problems", "Sparse pairs"],
-    href: "papers/non-pranath/NeurIPS_ML4PS_2024_110.pdf"
+    href: "https://ml4physicalsciences.github.io/2024/files/NeurIPS_ML4PS_2024_110.pdf"
   },
   {
     year: 2024,
@@ -123,7 +123,7 @@ const publications = [
     summary: "The lens equation supplies supervision when high-resolution targets are unavailable.",
     tags: ["generation", "physics"],
     labels: ["Unsupervised", "Super-resolution", "Lens equation"],
-    href: "papers/non-pranath/NeurIPS_ML4PS_2024_124.pdf"
+    href: "https://ml4physicalsciences.github.io/2024/files/NeurIPS_ML4PS_2024_124.pdf"
   },
   {
     year: 2023,
@@ -132,7 +132,7 @@ const publications = [
     summary: "Adversarial and consistency-based adaptation reduce performance loss across simulated observing domains.",
     tags: ["dark-matter", "representations"],
     labels: ["Domain adaptation", "Equivariance", "Simulation"],
-    href: "papers/pranath/2023_domain-adaptation-dark-matter_journal-preprint.pdf"
+    href: "https://doi.org/10.3847/1538-4357/acdfc7"
   },
   {
     year: 2023,
@@ -141,7 +141,7 @@ const publications = [
     summary: "Rotation- and reflection-aware networks encode physical symmetry directly into the architecture.",
     tags: ["physics", "dark-matter"],
     labels: ["Equivariance", "C8 symmetry", "Simulated"],
-    href: "papers/non-pranath/NeurIPS_ML4PS_2023_188.pdf"
+    href: "https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_188.pdf"
   },
   {
     year: 2023,
@@ -150,7 +150,7 @@ const publications = [
     summary: "Contrastive learning, BYOL, SimSiam, and DINO build reusable encoders from unlabeled simulations.",
     tags: ["representations", "dark-matter"],
     labels: ["Self-supervision", "Transformers", "Simulated"],
-    href: "papers/non-pranath/NeurIPS_ML4PS_2023_207.pdf"
+    href: "https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_207.pdf"
   },
   {
     year: 2023,
@@ -159,7 +159,7 @@ const publications = [
     summary: "A Transformer is paired with lensing-potential estimation and source reconstruction.",
     tags: ["physics", "representations", "dark-matter"],
     labels: ["Vision Transformer", "Lens equation", "Simulated"],
-    href: "papers/non-pranath/NeurIPS_ML4PS_2023_214.pdf"
+    href: "https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_214.pdf"
   },
   {
     year: 2021,
@@ -168,7 +168,7 @@ const publications = [
     summary: "Autoencoders learn a smooth-halo baseline and flag unexpected substructure through reconstruction error.",
     tags: ["dark-matter", "representations"],
     labels: ["Anomaly detection", "Unsupervised", "Simulated"],
-    href: "papers/pranath/2020_decoding-dark-matter-substructure_neurips-workshop-preprint.pdf"
+    href: "https://arxiv.org/abs/2008.12731"
   },
   {
     year: 2021,
@@ -177,7 +177,7 @@ const publications = [
     summary: "The founding study frames dark-matter substructure as morphology classification in simulated strong lenses.",
     tags: ["dark-matter"],
     labels: ["Founding paper", "CNN", "2019 preprint · 2020 journal"],
-    href: "papers/founding/1909.07346v1.pdf"
+    href: "https://doi.org/10.3847/1538-4357/ab7925"
   }
 ];
 
@@ -198,7 +198,7 @@ const people = [
   { initials: "PU", name: "Prajwal Uday", affiliation: "RWTH Aachen University", focus: "Physics-informed unsupervised super-resolution of strong-lensing images.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
   { initials: "JC", name: "Jen-Yu Chang", affiliation: "NYCU, Taiwan", focus: "Hybrid quantum-classical representation learning for dark-matter substructure.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
   { initials: "BC", name: "Bryan Chen", affiliation: "Ecole Polytechnique", focus: "Physics-guided machine learning for gravitational lensing.", links: [["GitHub", "https://github.com/BryanBradfo"]] },
-  { initials: "DS", name: "Dhruv Srivastava", affiliation: "UIUC", focus: "HEAL-PINN, sparse-data learning, and gravitational-lens finding.", links: [["Research", "papers/pranath/2025_heal-pinn_neurips-workshop.pdf"]] },
+  { initials: "DS", name: "Dhruv Srivastava", affiliation: "UIUC", focus: "HEAL-PINN, sparse-data learning, and gravitational-lens finding.", links: [["Research", "https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_252.pdf"]] },
   { initials: "KM", name: "Kartik Mandar", affiliation: "University of Catania", focus: "DeepLense data-processing pipelines for LSST-scale observations.", links: [["Website", "https://www.kartikmandar.com/"]] },
   { initials: "SN", name: "Susmit Neogi", affiliation: "IIT Bombay", focus: "Physics-guided machine learning on real gravitational-lensing images.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
   { initials: "MJ", name: "Michael Jiao", affiliation: "Harvard", focus: "Machine learning for gravitational-lens finding.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] }
@@ -273,8 +273,9 @@ function setupPeople() {
 
 function publicationMarkup(paper) {
   const labels = paper.labels.map(label => `<span>${label}</span>`).join('');
+  const external = paper.href.startsWith('http') ? ' target="_blank" rel="noreferrer"' : '';
   return `
-    <a class="publication-card reveal" href="${paper.href}" data-tags="${paper.tags.join(' ')}" data-search="${[paper.title, paper.authors, paper.summary, paper.labels.join(' '), paper.year].join(' ').toLowerCase()}">
+    <a class="publication-card reveal" href="${paper.href}"${external} data-tags="${paper.tags.join(' ')}" data-search="${[paper.title, paper.authors, paper.summary, paper.labels.join(' '), paper.year].join(' ').toLowerCase()}">
       <div class="publication-title">
         <h3>${paper.title}</h3>
         <p>${paper.authors}</p>

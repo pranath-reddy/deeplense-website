@@ -13,7 +13,7 @@ The website is intentionally simple and build-free. It uses plain HTML, CSS, and
 - No package manager or framework is required.
 - Everything published to the web lives in `dist/`.
 - GitHub Actions deploys `dist/` whenever a commit reaches `main`.
-- Research papers are served directly from `dist/papers/`.
+- Papers link to their authoritative public records whenever possible. Local PDFs are reserved for manuscripts without a stable public URL.
 
 ## Repository structure
 
@@ -66,14 +66,21 @@ Principal investigators are maintained directly in `dist/about.html` because the
 
 ### Publications
 
-Publication metadata is stored in the `publications` array in `dist/script.js`. Each record includes a title, authors, summary, tags, labels, year, and PDF path.
+Publication metadata is stored in the `publications` array in `dist/script.js`. Each record includes a title, authors, summary, tags, labels, year, and paper URL.
 
-When adding a locally hosted paper:
+Use links in this order of preference:
+
+1. Published journal DOI page
+2. arXiv abstract page
+3. Official conference or workshop paper
+4. Local PDF when no stable public record exists
+
+When a paper has no public record yet:
 
 1. Place the PDF in the appropriate folder under `dist/papers/`.
-2. Add its metadata to the `publications` array.
+2. Add its metadata and local path to the `publications` array.
 3. Use a path relative to `dist/`, such as `papers/pranath/example-paper.pdf`.
-4. Confirm that the paper opens from the local preview.
+4. Replace the local path with a public URL once an authoritative record becomes available, then remove the redundant PDF from the repository.
 
 The publication filters on the Research page are derived from the record tags, so use the existing tag vocabulary when possible.
 
