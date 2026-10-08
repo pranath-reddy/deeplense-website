@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">DeepLense — AI for Scientific Discovery</title>
+  <desc id="desc">DeepLense brand card with lensing rings and the statement Building intelligent systems for scientific discovery.</desc>
+  <rect width="1200" height="630" fill="#edf2ee"/>
+  <path d="M0 525C240 430 420 660 690 515S1040 300 1200 385V630H0Z" fill="#dce8e3"/>
+  <g fill="none" stroke="#102d2c" opacity=".14">
+    <ellipse cx="1000" cy="190" rx="315" ry="112" stroke-width="2" transform="rotate(-12 1000 190)"/>
+    <ellipse cx="1000" cy="190" rx="268" ry="92" stroke-width="2" transform="rotate(-12 1000 190)"/>
+    <ellipse cx="1000" cy="190" rx="220" ry="72" stroke-width="2" transform="rotate(-12 1000 190)"/>
+    <ellipse cx="1000" cy="190" rx="170" ry="53" stroke-width="2" transform="rotate(-12 1000 190)"/>
+  </g>
+  <path d="M822 208C905 104 1050 101 1139 191" fill="none" stroke="#102d2c" stroke-width="8" stroke-linecap="round" opacity=".85"/>
+  <circle cx="1000" cy="190" r="9" fill="#102d2c"/>
+  <circle cx="1062" cy="136" r="5" fill="#6ee7a2"/>
+  <g transform="translate(72 62)" fill="none" stroke="#102d2c">
+    <circle cx="34" cy="34" r="31" stroke-width="5"/>
+    <path d="M51.5 38.1A18 18 0 1 1 38.1 16.5" stroke-width="2.8"/>
+    <circle cx="57.6" cy="15" r="6" fill="#102d2c" stroke="none"/>
+  </g>
+  <text x="156" y="108" fill="#102d2c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1.6">DeepLense</text>
+  <text x="72" y="246" fill="#102d2c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="70" font-weight="730" letter-spacing="-3.5">Building intelligent systems for</text>
+  <text x="72" y="326" fill="#214b47" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-style="italic" letter-spacing="-2.5">scientific discovery.</text>
+  <text x="72" y="430" fill="#526762" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="24">AI for dark matter · Strong gravitational lensing · Open science</text>
+  <line x1="72" y1="506" x2="1128" y2="506" stroke="#102d2c" opacity=".18"/>
+  <text x="72" y="558" fill="#102d2c" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="600" letter-spacing="2">OPEN-SOURCE RESEARCH · ML4SCI</text>
+  <text x="1128" y="558" fill="#102d2c" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="650">deeplense.org</text>
+</svg>

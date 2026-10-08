@@ -26,6 +26,8 @@ The website is intentionally simple and build-free. It uses plain HTML, CSS, and
 │   ├── about.html                      # Mission, team, support, and contact
 │   ├── research.html                   # Publication index and filters
 │   ├── 404.html                        # Custom not-found page
+│   ├── robots.txt                      # Search crawler policy
+│   ├── sitemap.xml                     # Canonical public routes
 │   ├── script.js                       # Publications, people, cohort, and UI behavior
 │   ├── styles.css                      # Design system and responsive layout
 │   ├── assets/                         # Logos, favicon, and visual assets
