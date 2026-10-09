@@ -24,7 +24,8 @@ The website is intentionally simple and build-free. It uses plain HTML, CSS, and
 │   ├── index.html                      # Redirect from the domain root to /home
 │   ├── home.html                       # Homepage, featured research, and news
 │   ├── about.html                      # Mission, team, support, and contact
-│   ├── research.html                   # Publication index and filters
+│   ├── research.html                   # Research thesis and publication index
+│   ├── software.html                   # Open-source software stack and repositories
 │   ├── 404.html                        # Custom not-found page
 │   ├── robots.txt                      # Search crawler policy
 │   ├── sitemap.xml                     # Canonical public routes

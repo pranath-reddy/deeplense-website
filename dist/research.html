@@ -22,7 +22,7 @@
   <script>if (/^(www\.)?deeplense\.org$/.test(window.location.hostname) && window.location.pathname.endsWith('/research.html')) window.location.replace('/research');</script>
   <title>Research — DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261009f">
+  <link rel="stylesheet" href="styles.css?v=20261009g">
   <script src="script.js?v=20261009a" defer></script>
 </head>
 <body>
@@ -30,7 +30,7 @@
   <header class="site-header" data-header>
     <a class="brand" href="/home" aria-label="DeepLense home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>DeepLense</span></a>
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
-    <nav class="site-nav" aria-label="Primary navigation" data-nav><a href="/home">Home</a><a class="active" href="/research">Research</a><a href="/about">People &amp; About</a><a href="/home#news">News</a></nav>
+    <nav class="site-nav" aria-label="Primary navigation" data-nav><a href="/home">Home</a><a class="active" href="/research">Research</a><a href="/software">Software</a><a href="/about">People &amp; About</a><a href="/home#news">News</a></nav>
     <div class="header-actions">
       <a class="header-parent-link" href="https://ml4sci.org/" target="_blank" rel="noreferrer">ML4SCI <span aria-hidden="true">↗</span></a>
       <a class="header-cta" href="https://github.com/ML4SCI/DeepLense" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
@@ -65,42 +65,17 @@
       <article class="reveal" data-delay="3"><span>04</span><h3>Efficiency changes the question.</h3><p>Compact models and faster simulation unlock new experiments.</p></article>
     </section>
 
-    <section class="section software-section" aria-labelledby="software-heading">
+    <section class="section software-preview-section" aria-labelledby="software-heading">
       <div class="section-heading reveal">
         <div><p class="section-kicker">Open research software</p><h2 id="software-heading">From simulated skies<br>to scientific agents.</h2></div>
-        <p>Our codebases make the path from data generation to autonomous experimentation inspectable, reproducible, and open to contribution.</p>
+        <div><p>Five connected codebases carry the work from data generation to survey processing and autonomous experimentation.</p><a class="inline-link software-page-link" href="/software">Explore the software stack →</a></div>
       </div>
-      <div class="software-grid">
-        <a class="software-card reveal" href="https://github.com/ML4SCI/DeepLense" target="_blank" rel="noreferrer">
-          <div class="software-meta"><span>Research · Core</span><span>GitHub ↗</span></div>
-          <h3>DeepLense</h3>
-          <p>The group’s central open-source repository: datasets, models, benchmarks, and contributor projects spanning dark-matter classification, representation learning, and super-resolution.</p>
-          <span class="software-stack">Models · Datasets · Community projects</span>
-        </a>
-        <a class="software-card reveal" data-delay="1" href="https://github.com/mwt5345/DeepLenseSim" target="_blank" rel="noreferrer">
-          <div class="software-meta"><span>Simulation · Synthetic</span><span>GitHub ↗</span></div>
-          <h3>DeepLenseSim</h3>
-          <p>Software for generating strong-lensing images and the datasets behind the early DeepLense studies, built with lenstronomy, pyHalo, and Colossus.</p>
-          <span class="software-stack">Lensing simulation · Dataset generation</span>
-        </a>
-        <a class="software-card reveal" data-delay="2" href="https://github.com/lparis3/deeplens_update" target="_blank" rel="noreferrer">
-          <div class="software-meta"><span>Simulation · RealSky</span><span>GitHub ↗</span></div>
-          <h3>DeepLense RealSky</h3>
-          <p>A next-generation simulator that combines real galaxy imagery from GalaxiesML with physically sampled lens and halo parameters.</p>
-          <span class="software-stack">Real imagery · Physical sampling</span>
-        </a>
-        <a class="software-card reveal" data-delay="3" href="https://github.com/kartikmandar/RIPPLe" target="_blank" rel="noreferrer">
-          <div class="software-meta"><span>Data · Rubin LSST</span><span>GitHub ↗</span></div>
-          <h3>RIPPLe</h3>
-          <p>The Rubin Image Preparation and Processing Lensing Engine: retrieving LSST observations, building normalized multi-band cutouts, and connecting them to DeepLense inference.</p>
-          <span class="software-stack">Butler data · Preprocessing · Inference</span>
-        </a>
-        <a class="software-card software-card-dark reveal" data-delay="4" href="https://github.com/ML4SCI/DeepLense-AI-Scientist" target="_blank" rel="noreferrer">
-          <div class="software-meta"><span>Agents · DLens</span><span>GitHub ↗</span></div>
-          <h3>DeepLense AI Scientist</h3>
-          <p>The companion repository for DLens: a Pydantic AI multi-agent framework for closed-loop simulation, model search, evaluation, and experiment planning.</p>
-          <span class="software-stack">AAAI Spotlight · Auditable workflows</span>
-        </a>
+      <div class="software-preview-grid">
+        <a class="software-preview-card reveal" href="/software#deeplense"><span>Core research</span><h3>DeepLense</h3><i aria-hidden="true">→</i></a>
+        <a class="software-preview-card reveal" data-delay="1" href="/software#deeplensesim"><span>Synthetic simulation</span><h3>DeepLenseSim</h3><i aria-hidden="true">→</i></a>
+        <a class="software-preview-card reveal" data-delay="2" href="/software#realsky"><span>Real-image simulation</span><h3>RealSky</h3><i aria-hidden="true">→</i></a>
+        <a class="software-preview-card reveal" data-delay="3" href="/software#ripple"><span>Rubin LSST data</span><h3>RIPPLe</h3><i aria-hidden="true">→</i></a>
+        <a class="software-preview-card software-preview-dark reveal" data-delay="4" href="/software#dlens"><span>Scientific agents</span><h3>DLens</h3><i aria-hidden="true">→</i></a>
       </div>
     </section>
 
@@ -170,7 +145,7 @@
   <footer class="site-footer">
     <a class="brand footer-brand" href="/home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>DeepLense</span></a>
     <p>An open-source research group within ML4SCI.</p>
-    <div class="footer-links"><a href="/home">Home</a><a href="/about">People</a><a href="mailto:ml4-sci@cern.ch">ml4-sci@cern.ch</a><a href="https://github.com/ML4SCI/DeepLense" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    <div class="footer-links"><a href="/home">Home</a><a href="/software">Software</a><a href="/about">People</a><a href="mailto:ml4-sci@cern.ch">ml4-sci@cern.ch</a><a href="https://github.com/ML4SCI/DeepLense" target="_blank" rel="noreferrer">GitHub ↗</a></div>
     <p class="copyright">© <span data-year></span> DeepLense · Built for open science.</p>
   </footer>
 </body>
