@@ -8,7 +8,7 @@
   <meta name="description" content="Open-source DeepLense software for gravitational-lens simulation, Rubin LSST data processing, scientific machine learning, and autonomous research agents.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Software — DeepLense">
-  <meta property="og:description" content="Five connected open-source systems for strong-lensing simulation, survey data, machine learning, and scientific agents.">
+  <meta property="og:description" content="Six connected open-source systems for strong-lensing simulation, survey data, machine learning, and scientific agents.">
   <meta property="og:url" content="https://deeplense.org/software">
   <meta property="og:image" content="https://deeplense.org/assets/social-card.png">
   <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
   <script>if (/^(www\.)?deeplense\.org$/.test(window.location.hostname) && window.location.pathname.endsWith('/software.html')) window.location.replace('/software');</script>
   <title>Software — DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261009g">
+  <link rel="stylesheet" href="styles.css?v=20261009h">
   <script src="script.js?v=20261009a" defer></script>
 </head>
 <body>
@@ -41,7 +41,7 @@
     <section class="page-hero software-hero">
       <div class="page-hero-index" aria-hidden="true">S</div>
       <div class="reveal">
-        <p class="eyebrow"><span class="pulse-dot"></span> Open source · Five connected systems</p>
+        <p class="eyebrow"><span class="pulse-dot"></span> Open source · Six connected systems</p>
         <h1>Software for an<br><em>observable universe.</em></h1>
       </div>
       <p class="page-hero-lede reveal" data-delay="1">DeepLense builds the infrastructure around the research: simulation, survey-data preparation, machine learning, and auditable scientific agents.</p>
@@ -49,8 +49,8 @@
 
     <section class="section software-map-section" aria-labelledby="stack-heading">
       <div class="section-heading reveal">
-        <div><p class="section-kicker">The software stack</p><h2 id="stack-heading">One research loop.<br>Five open systems.</h2></div>
-        <p>Simulation and survey observations become model-ready evidence. The core repository turns that evidence into experiments; DLens makes the workflow programmable.</p>
+        <div><p class="section-kicker">The software stack</p><h2 id="stack-heading">One research loop.<br>Six open systems.</h2></div>
+        <p>Simulation and survey observations become model-ready evidence. The core repository supports the experiments; typed agents make the workflow programmable and auditable.</p>
       </div>
       <div class="software-map reveal" aria-label="DeepLense software flow">
         <div class="map-source-stack">
@@ -61,7 +61,10 @@
         <span class="map-arrow" aria-hidden="true">→</span>
         <a class="map-node map-node-core" href="/software#deeplense"><span>Models · Benchmarks · Projects</span><strong>DeepLense</strong><small>Shared research foundation</small></a>
         <span class="map-arrow" aria-hidden="true">→</span>
-        <a class="map-node map-node-agent" href="/software#dlens"><span>Closed-loop orchestration</span><strong>DLens</strong><small>DeepLense AI Scientist</small></a>
+        <div class="map-agent-stack">
+          <a class="map-node map-node-agent" href="/software#ripple-scientist"><span>Agentic survey pipeline</span><strong>RIPPLe Scientist</strong><small>Provenance-first control plane</small></a>
+          <a class="map-node map-node-agent" href="/software#dlens"><span>Closed-loop experimentation</span><strong>DLens</strong><small>DeepLense AI Scientist</small></a>
+        </div>
       </div>
       <p class="map-note reveal">A typical path through the stack—not a requirement. Every repository can be used and extended independently.</p>
     </section>
@@ -117,8 +120,19 @@
           <a class="software-repo-link" href="https://github.com/kartikmandar/RIPPLe" target="_blank" rel="noreferrer">Open repository <span aria-hidden="true">↗</span></a>
         </article>
 
+        <article class="software-detail reveal" id="ripple-scientist">
+          <div class="software-detail-index"><span>05</span><small>Agentic data</small></div>
+          <div class="software-detail-main">
+            <h3>RIPPLe Scientist</h3>
+            <p>A provenance-first agentic pipeline that separates Rubin data retrieval, deterministic preprocessing, model qualification, and scientific decisions behind typed interfaces.</p>
+            <ul class="software-capabilities"><li>Rubin DP2 retrieval</li><li>Typed scientific agents</li><li>Qualification gates</li></ul>
+          </div>
+          <div class="software-detail-use"><span>Designed for</span><p>Auditable automation across survey preparation, model integration, and bounded simulation or training workflows.</p></div>
+          <a class="software-repo-link" href="https://github.com/pranath-reddy/genesis-ripple" target="_blank" rel="noreferrer">Open repository <span aria-hidden="true">↗</span></a>
+        </article>
+
         <article class="software-detail software-detail-dark reveal" id="dlens">
-          <div class="software-detail-index"><span>05</span><small>Agents</small></div>
+          <div class="software-detail-index"><span>06</span><small>Agents</small></div>
           <div class="software-detail-main">
             <h3>DeepLense AI Scientist</h3>
             <p>The companion framework for DLens: typed Pydantic AI agents coordinate simulation, model search, evaluation, and experiment planning in auditable loops.</p>
