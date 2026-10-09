@@ -33,7 +33,8 @@ const publications = [
     summary: "Selected for a spotlight talk at the AAAI Fall Symposium; typed agents connect lens simulation, architecture search, evaluation, and experiment planning.",
     tags: ["agents", "dark-matter"],
     labels: ["AAAI Spotlight", "Agents", "Auditable workflow"],
-    href: "papers/FSS-26_Paper_XXX_2415%20(1).pdf"
+    href: "papers/FSS-26_Paper_XXX_2415%20(1).pdf",
+    codeHref: "https://github.com/ML4SCI/DeepLense-AI-Scientist"
   },
   {
     year: 2026,
@@ -283,16 +284,17 @@ function setupPeople() {
 function publicationMarkup(paper) {
   const labels = paper.labels.map(label => `<span>${label}</span>`).join('');
   const external = paper.href.startsWith('http') ? ' target="_blank" rel="noreferrer"' : '';
+  const codeLink = paper.codeHref ? `<a class="publication-code" href="${paper.codeHref}" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a>` : '';
   return `
-    <a class="publication-card reveal" href="${paper.href}"${external} data-tags="${paper.tags.join(' ')}" data-search="${[paper.title, paper.authors, paper.summary, paper.labels.join(' '), paper.year].join(' ').toLowerCase()}">
+    <article class="publication-card reveal" data-tags="${paper.tags.join(' ')}" data-search="${[paper.title, paper.authors, paper.summary, paper.labels.join(' '), paper.year].join(' ').toLowerCase()}">
       <div class="publication-title">
-        <h3>${paper.title}</h3>
+        <h3><a href="${paper.href}"${external}>${paper.title}</a></h3>
         <p>${paper.authors}</p>
         <div class="publication-tags">${labels}</div>
       </div>
-      <p class="publication-summary">${paper.summary}</p>
-      <span class="publication-link" aria-hidden="true">↗</span>
-    </a>`;
+      <div class="publication-summary-wrap"><p class="publication-summary">${paper.summary}</p>${codeLink}</div>
+      <a class="publication-link" href="${paper.href}"${external} aria-label="Read ${paper.title}"><span aria-hidden="true">↗</span></a>
+    </article>`;
 }
 
 function setupPublications() {

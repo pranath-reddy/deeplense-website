@@ -285,6 +285,20 @@ img { display: block; max-width: 100%; }
 .principle-strip span { color: var(--muted); font: 500 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
 .principle-strip h3 { margin: 68px 0 10px; font-size: 21px; letter-spacing: -.03em; }
 .principle-strip p { margin: 0; color: var(--muted); font-size: 13px; }
+.software-section { padding-top: 20px; }
+.software-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.software-card { min-height: 390px; padding: 28px; display: flex; flex-direction: column; border-right: 1px solid var(--line); transition: background .22s, transform .22s; }
+.software-card:last-child { border-right: 0; }
+.software-card:hover { background: rgba(255,255,255,.52); transform: translateY(-4px); }
+.software-card-dark { background: var(--forest); color: var(--white); }
+.software-card-dark:hover { background: #173c39; }
+.software-meta { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font: 550 10px ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .08em; }
+.software-card-dark .software-meta { color: rgba(255,255,255,.58); }
+.software-card h3 { margin: 90px 0 14px; font-size: clamp(28px, 2.8vw, 39px); letter-spacing: -.045em; }
+.software-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.software-card-dark p { color: rgba(255,255,255,.7); }
+.software-stack { margin-top: auto; padding-top: 26px; color: var(--muted); font-size: 11px; }
+.software-card-dark .software-stack { color: rgba(255,255,255,.58); }
 .publication-section { border-top: 1px solid var(--line); }
 .publication-tools { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 80px; }
 .search-field { position: relative; flex: 0 1 340px; }
@@ -304,8 +318,12 @@ img { display: block; max-width: 100%; }
 .publication-card:hover { padding-inline: 20px; background: rgba(255,255,255,.48); }
 .publication-card[hidden] { display: none; }
 .publication-title h3 { margin: 0 0 9px; font-size: 23px; line-height: 1.18; letter-spacing: -.035em; }
+.publication-title h3 a { transition: color .2s; }
+.publication-title h3 a:hover { color: #315d58; }
 .publication-title p { margin: 0; color: var(--muted); font-size: 12px; }
 .publication-summary { color: var(--muted); font-size: 13px; line-height: 1.55; }
+.publication-summary-wrap { align-self: center; }
+.publication-code { display: inline-flex; gap: 6px; align-items: center; margin-top: 13px; padding-bottom: 3px; border-bottom: 1px solid currentColor; color: var(--forest); font-size: 11px; font-weight: 650; }
 .publication-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
 .publication-tags span { padding: 5px 8px; border-radius: 999px; background: var(--paper-2); color: var(--muted); font-size: 10px; }
 .publication-link { width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; font-size: 17px; transition: background .2s, color .2s, transform .2s; }
@@ -414,6 +432,9 @@ img { display: block; max-width: 100%; }
   .page-hero-lede { max-width: 650px; }
   .principle-strip { grid-template-columns: 1fr 1fr; }
   .principle-strip article:nth-child(2) { border-right: 0; }
+  .software-grid { grid-template-columns: 1fr; }
+  .software-card { min-height: 310px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .software-card:last-child { border-bottom: 0; }
   .publication-tools { align-items: stretch; flex-direction: column; }
   .search-field { flex-basis: auto; }
   .filter-row { justify-content: flex-start; }
@@ -463,7 +484,7 @@ img { display: block; max-width: 100%; }
   .filter-row { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 5px; }
   .filter-chip { flex: 0 0 auto; }
   .publication-card { grid-template-columns: 1fr auto; gap: 18px; }
-  .publication-summary { grid-column: 1/-1; grid-row: 2; }
+  .publication-summary-wrap { grid-column: 1/-1; grid-row: 2; }
   .publication-link { grid-column: 2; grid-row: 1; }
   .evidence-section { min-height: 680px; }
   .values-row { grid-template-columns: 1fr; }
