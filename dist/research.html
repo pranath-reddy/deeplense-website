@@ -22,7 +22,7 @@
   <script>if (/^(www\.)?deeplense\.org$/.test(window.location.hostname) && window.location.pathname.endsWith('/research.html')) window.location.replace('/research');</script>
   <title>Research — DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261009b">
+  <link rel="stylesheet" href="styles.css?v=20261009c">
   <script src="script.js?v=20261009a" defer></script>
 </head>
 <body>
@@ -71,19 +71,25 @@
         <p>Our codebases make the path from data generation to autonomous experimentation inspectable, reproducible, and open to contribution.</p>
       </div>
       <div class="software-grid">
-        <a class="software-card reveal" href="https://github.com/mwt5345/DeepLenseSim" target="_blank" rel="noreferrer">
+        <a class="software-card reveal" href="https://github.com/ML4SCI/DeepLense" target="_blank" rel="noreferrer">
+          <div class="software-meta"><span>Research · Main repository</span><span>GitHub ↗</span></div>
+          <h3>DeepLense</h3>
+          <p>The group’s central open-source repository: datasets, models, benchmarks, and contributor projects spanning dark-matter classification, representation learning, and super-resolution.</p>
+          <span class="software-stack">Models · Datasets · Community projects</span>
+        </a>
+        <a class="software-card reveal" data-delay="1" href="https://github.com/mwt5345/DeepLenseSim" target="_blank" rel="noreferrer">
           <div class="software-meta"><span>Simulation · Foundational</span><span>GitHub ↗</span></div>
           <h3>DeepLenseSim</h3>
           <p>Software for generating strong-lensing images and the datasets behind the early DeepLense studies, built with lenstronomy, pyHalo, and Colossus.</p>
           <span class="software-stack">Lensing simulation · Dataset generation</span>
         </a>
-        <a class="software-card reveal" data-delay="1" href="https://github.com/lparis3/deeplens_update" target="_blank" rel="noreferrer">
+        <a class="software-card reveal" data-delay="2" href="https://github.com/lparis3/deeplens_update" target="_blank" rel="noreferrer">
           <div class="software-meta"><span>Simulation · Updated</span><span>GitHub ↗</span></div>
-          <h3>deeplens_update</h3>
+          <h3>DeepLense Simulation Pipeline</h3>
           <p>A physically sampled simulation pipeline that incorporates real galaxy images and the GalaxiesML dataset through lenstronomy and pyHalo.</p>
           <span class="software-stack">Real imagery · Physical sampling</span>
         </a>
-        <a class="software-card software-card-dark reveal" data-delay="2" href="https://github.com/ML4SCI/DeepLense-AI-Scientist" target="_blank" rel="noreferrer">
+        <a class="software-card software-card-dark reveal" data-delay="3" href="https://github.com/ML4SCI/DeepLense-AI-Scientist" target="_blank" rel="noreferrer">
           <div class="software-meta"><span>Agents · DLens companion</span><span>GitHub ↗</span></div>
           <h3>DeepLense AI Scientist</h3>
           <p>The companion repository for DLens: a Pydantic AI multi-agent framework for closed-loop simulation, model search, evaluation, and experiment planning.</p>
