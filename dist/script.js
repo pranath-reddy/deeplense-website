@@ -41,7 +41,7 @@ const publications = [
     authors: "Arnesh Batra, Karthik Gaur, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Task-aware joint-embedding learning with exact D4 correspondence and arc-weighted radial consistency.",
     tags: ["representations", "physics", "dark-matter"],
-    labels: ["Self-supervision", "D4 symmetry", "Simulated"],
+    labels: ["NeurIPS RPS", "Self-supervision", "D4 symmetry"],
     href: "papers/54_Lens_LeJEPA_Learning_the_Ri%20(1).pdf"
   },
   {
@@ -50,7 +50,7 @@ const publications = [
     authors: "Sushmanth Reddy, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "A controlled hybrid model that refines orbit-averaged classical features without claiming quantum advantage.",
     tags: ["physics", "dark-matter"],
-    labels: ["Quantum-classical", "Equivariance", "Simulated"],
+    labels: ["AAAI FSS", "Quantum-classical", "Equivariance"],
     href: "papers/FSS-26_Paper_XXX_8741.pdf"
   },
   {
@@ -59,7 +59,7 @@ const publications = [
     authors: "Aatmaj Amol Salunke, Mywish Anand, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Selected for a spotlight talk at the AAAI Fall Symposium; typed agents connect lens simulation, architecture search, evaluation, and experiment planning.",
     tags: ["agents", "dark-matter"],
-    labels: ["AAAI Spotlight", "Agents", "Auditable workflow"],
+    labels: ["AAAI FSS", "Spotlight", "Agents"],
     href: "papers/FSS-26_Paper_XXX_2415%20(1).pdf",
     codeHref: "https://github.com/ML4SCI/DeepLense-AI-Scientist"
   },
@@ -69,7 +69,7 @@ const publications = [
     authors: "Pranath Reddy",
     summary: "A bounded-memory study of learned retention under clean and noisy long-horizon agent experience.",
     tags: ["agents"],
-    labels: ["LLM agents", "Memory", "Broader AI"],
+    labels: ["ICML", "LLM agents", "Memory"],
     href: "https://arxiv.org/abs/2606.29178"
   },
   {
@@ -78,7 +78,7 @@ const publications = [
     authors: "Ashutosh Ojha, Pranath Reddy & Sergei Gleyzer",
     summary: "An interpretability study of late hidden-state signals linking generated reasoning traces to final answers.",
     tags: ["representations"],
-    labels: ["Interpretability", "Diffusion LMs", "Broader AI"],
+    labels: ["NeurIPS DiffuLM", "Interpretability", "Diffusion LMs"],
     href: "papers/123_Trace_Answer_Compatibility.pdf"
   },
   {
@@ -87,7 +87,7 @@ const publications = [
     authors: "Hamees Sayed, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Fast, controllable generation of strong-lensing images across discrete classes and continuous parameters.",
     tags: ["generation", "dark-matter"],
-    labels: ["Flow matching", "Simulation", "Conditional generation"],
+    labels: ["ML4PS", "Flow matching", "Conditional generation"],
     href: "https://arxiv.org/abs/2510.07878"
   },
   {
@@ -96,7 +96,7 @@ const publications = [
     authors: "J Rishi, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Joint-embedding predictive learning paired with a lens-equation physical encoder.",
     tags: ["representations", "physics", "dark-matter"],
-    labels: ["JEPA", "Foundation models", "Simulated"],
+    labels: ["ML4PS", "JEPA", "Foundation models"],
     href: "https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_340.pdf"
   },
   {
@@ -105,7 +105,7 @@ const publications = [
     authors: "Dhruv Srivastava, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Geometry-aware windows and lens-equation encoding for sparse-data morphology classification.",
     tags: ["physics", "dark-matter"],
-    labels: ["Swin Transformer", "PINN", "Sparse data"],
+    labels: ["ML4PS", "Swin Transformer", "PINN"],
     href: "https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_252.pdf"
   },
   {
@@ -114,7 +114,7 @@ const publications = [
     authors: "Aleksandr Duplinskii, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "A direct test of whether better-looking reconstructions also improve downstream physical estimates.",
     tags: ["generation", "dark-matter"],
-    labels: ["Super-resolution", "LSST-like", "Scientific utility"],
+    labels: ["ML4PS", "Super-resolution", "LSST-like"],
     href: "https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_317.pdf"
   },
   {
@@ -123,7 +123,7 @@ const publications = [
     authors: "Hanna Parul, Sergei Gleyzer, Pranath Reddy & Michael W. Toomey",
     summary: "Simulation-to-observation transfer for rare lens discovery in real Hyper Suprime-Cam data.",
     tags: ["dark-matter", "representations"],
-    labels: ["Domain adaptation", "Real observations", "Lens finding"],
+    labels: ["ApJ", "Domain adaptation", "Real observations"],
     href: "https://doi.org/10.3847/1538-4357/adee16"
   },
   {
@@ -132,7 +132,7 @@ const publications = [
     authors: "Pranath Reddy, Michael W. Toomey, Hanna Parul & Sergei Gleyzer",
     summary: "Conditional diffusion for enhancing low-resolution lensing images while preserving fine morphology.",
     tags: ["generation", "dark-matter"],
-    labels: ["Diffusion", "Super-resolution", "Mixed data"],
+    labels: ["MLST", "Diffusion", "Super-resolution"],
     href: "https://doi.org/10.1088/2632-2153/ad76f8"
   },
   {
@@ -141,7 +141,7 @@ const publications = [
     authors: "Ashutosh Ojha, Sergei Gleyzer, Michael W. Toomey & Pranath Reddy",
     summary: "A ViT physical encoder and lens-equation inversion improve compact morphology classifiers.",
     tags: ["physics", "dark-matter"],
-    labels: ["PINN", "Vision Transformer", "Simulated"],
+    labels: ["ML4PS", "PINN", "Vision Transformer"],
     href: "https://ml4physicalsciences.github.io/2024/files/NeurIPS_ML4PS_2024_78.pdf"
   },
   {
@@ -150,7 +150,7 @@ const publications = [
     authors: "Peimeng Guan, Sergei Gleyzer & Michael W. Toomey",
     summary: "Adaptive loop unrolling learns from sparse pairs when the observing operator is not exactly known.",
     tags: ["generation", "physics"],
-    labels: ["Semi-supervision", "Inverse problems", "Sparse pairs"],
+    labels: ["ML4PS", "Semi-supervision", "Inverse problems"],
     href: "https://ml4physicalsciences.github.io/2024/files/NeurIPS_ML4PS_2024_110.pdf"
   },
   {
@@ -159,7 +159,7 @@ const publications = [
     authors: "Anirudh Shankar, Michael W. Toomey & Sergei Gleyzer",
     summary: "The lens equation supplies supervision when high-resolution targets are unavailable.",
     tags: ["generation", "physics"],
-    labels: ["Unsupervised", "Super-resolution", "Lens equation"],
+    labels: ["ML4PS", "Unsupervised", "Super-resolution"],
     href: "https://ml4physicalsciences.github.io/2024/files/NeurIPS_ML4PS_2024_124.pdf"
   },
   {
@@ -168,7 +168,7 @@ const publications = [
     authors: "Stephon Alexander, Sergei Gleyzer, Pranath Reddy, Marcos Tidball & Michael W. Toomey",
     summary: "Adversarial and consistency-based adaptation reduce performance loss across simulated observing domains.",
     tags: ["dark-matter", "representations"],
-    labels: ["Domain adaptation", "Equivariance", "Simulation"],
+    labels: ["ApJ", "Domain adaptation", "Equivariance"],
     href: "https://doi.org/10.3847/1538-4357/acdfc7"
   },
   {
@@ -177,7 +177,7 @@ const publications = [
     authors: "Geo Jolly Cheeramvelil, Sergei Gleyzer & Michael W. Toomey",
     summary: "Rotation- and reflection-aware networks encode physical symmetry directly into the architecture.",
     tags: ["physics", "dark-matter"],
-    labels: ["Equivariance", "C8 symmetry", "Simulated"],
+    labels: ["ML4PS", "Equivariance", "C8 symmetry"],
     href: "https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_188.pdf"
   },
   {
@@ -186,7 +186,7 @@ const publications = [
     authors: "Yashwardhan A. Deshmukh, Sergei Gleyzer, Kartik Sachdev & Michael W. Toomey",
     summary: "Contrastive learning, BYOL, SimSiam, and DINO build reusable encoders from unlabeled simulations.",
     tags: ["representations", "dark-matter"],
-    labels: ["Self-supervision", "Transformers", "Simulated"],
+    labels: ["ML4PS", "Self-supervision", "Transformers"],
     href: "https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_207.pdf"
   },
   {
@@ -195,7 +195,7 @@ const publications = [
     authors: "Lucas J. Velôso, Michael W. Toomey & Sergei Gleyzer",
     summary: "A Transformer is paired with lensing-potential estimation and source reconstruction.",
     tags: ["physics", "representations", "dark-matter"],
-    labels: ["Vision Transformer", "Lens equation", "Simulated"],
+    labels: ["ML4PS", "Vision Transformer", "Lens equation"],
     href: "https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_214.pdf"
   },
   {
@@ -204,7 +204,7 @@ const publications = [
     authors: "Stephon Alexander, Sergei Gleyzer, Hanna Parul, Pranath Reddy, Michael W. Toomey, Emanuele Usai & Ryker Von Klar",
     summary: "Autoencoders learn a smooth-halo baseline and flag unexpected substructure through reconstruction error.",
     tags: ["dark-matter", "representations"],
-    labels: ["Anomaly detection", "Unsupervised", "Simulated"],
+    labels: ["ML4PS", "Anomaly detection", "Unsupervised"],
     href: "https://arxiv.org/abs/2008.12731"
   },
   {
@@ -213,7 +213,7 @@ const publications = [
     authors: "Stephon Alexander, Sergei Gleyzer, Evan McDonough, Michael W. Toomey & Emanuele Usai",
     summary: "The founding study frames dark-matter substructure as morphology classification in simulated strong lenses.",
     tags: ["dark-matter"],
-    labels: ["Founding paper", "CNN", "2019 preprint · 2020 journal"],
+    labels: ["ApJ", "Founding paper", "CNN"],
     href: "https://doi.org/10.3847/1538-4357/ab7925"
   }
 ];
