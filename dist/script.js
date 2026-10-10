@@ -5,7 +5,7 @@ const publications = [
     authors: "Karthik Gaur, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Polar resampling with an azimuthal residual exposes non-axisymmetric lens structure and improves label-efficient representations without changing the encoder backbone.",
     tags: ["representations", "physics", "dark-matter"],
-    labels: ["ML4PS 2026 · Accepted", "Self-supervision", "Polar coordinates"],
+    labels: ["ML4PS", "Self-supervision", "Polar coordinates"],
     href: "papers/2026_polar-coordinate-prior_strong-lens-representations.pdf"
   },
   {
@@ -14,7 +14,7 @@ const publications = [
     authors: "Karthik Gaur, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "Stationary latent targets improve frozen, label-efficient strong-lensing representations and axion-mass regression under a repaired multi-seed evaluation protocol.",
     tags: ["representations", "dark-matter"],
-    labels: ["ML4PS 2026 · Accepted", "Self-supervision", "Label-efficient"],
+    labels: ["ML4PS", "Self-supervision", "Label-efficient"],
     href: "papers/2026_ml4ps_vela-stationary-latent-targets.pdf"
   },
   {
@@ -23,7 +23,7 @@ const publications = [
     authors: "Sushmanth Reddy, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "A physics-guided C4-covariant spin-spectral neural operator improves strong-lensing field surrogates while preserving quarter-turn covariance to numerical precision.",
     tags: ["physics", "dark-matter"],
-    labels: ["ML4PS 2026 · Accepted", "Neural operators", "Equivariance"],
+    labels: ["ML4PS", "Neural operators", "Equivariance"],
     href: "papers/2026_ml4ps_bic4-neural-operator.pdf"
   },
   {
@@ -32,7 +32,7 @@ const publications = [
     authors: "Paras Balani, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "A controlled neural-operator ablation shows that removing pooling preserves zero-shot resolution transfer on Darcy flow, while input-conditioned filters mainly improve in-distribution accuracy.",
     tags: ["physics"],
-    labels: ["ML4PS 2026 · Accepted", "Neural operators", "Darcy flow"],
+    labels: ["ML4PS", "Neural operators", "Darcy flow"],
     href: "papers/2026_ml4ps_pooling-resolution-invariant-structure.pdf"
   },
   {
