@@ -26,12 +26,14 @@ The website is intentionally simple and build-free. It uses plain HTML, CSS, and
 │   ├── about.html                      # Mission, team, support, and contact
 │   ├── research.html                   # Research thesis and publication index
 │   ├── software.html                   # Open-source software stack and repositories
+│   ├── news.html                       # Events and GSoC student-writing archive
 │   ├── 404.html                        # Custom not-found page
 │   ├── robots.txt                      # Search crawler policy
 │   ├── sitemap.xml                     # Canonical public routes
 │   ├── script.js                       # Publications, people, cohort, and UI behavior
+│   ├── news.js                         # News-page blog metadata and filtering
 │   ├── styles.css                      # Design system and responsive layout
-│   ├── assets/                         # Logos, favicon, and visual assets
+│   ├── assets/                         # Logos, favicon, event photography, and visual assets
 │   └── papers/                         # Locally hosted research PDFs
 └── README.md
 ```
@@ -94,10 +96,13 @@ Edit `cohort2026` in `dist/script.js` to update the current contributor cohort. 
 
 ### Homepage, news, partners, and contact
 
-- Homepage copy, featured papers, news, and partner links: `dist/home.html`
+- Homepage copy, featured papers, news preview, and partner links: `dist/home.html`
+- Event features and page framing: `dist/news.html`
+- Student blog metadata, archive filters, and the RIPPLe series: `dist/news.js`
+- Event photography: `dist/assets/news/`
 - Mission, principal investigators, funding, and contact: `dist/about.html`
 - Research-page framing and methodology notes: `dist/research.html`
-- Shared footer contact email: all three main HTML pages
+- Shared footer contact email and navigation: all public HTML pages
 
 The current public contact address is [ml4-sci@cern.ch](mailto:ml4-sci@cern.ch).
 
@@ -110,7 +115,7 @@ The HTML pages append a small version string to `styles.css` and `script.js`, fo
 <script src="script.js?v=20261008b" defer></script>
 ```
 
-When changing CSS or JavaScript, increment the version consistently in `home.html`, `about.html`, `research.html`, and `404.html` where applicable. This prevents visitors from receiving stale assets after a deployment.
+When changing CSS or JavaScript, increment the version consistently in `home.html`, `about.html`, `research.html`, `software.html`, `news.html`, and `404.html` where applicable. This prevents visitors from receiving stale assets after a deployment.
 
 ### Brand assets
 
@@ -127,7 +132,7 @@ All four files use a transparent background and the website's forest color (`#10
 
 Before publishing:
 
-1. Preview the homepage, People & About, and Research pages.
+1. Preview the homepage, Research, Software, People & About, and News pages.
 2. Check desktop landscape, desktop portrait, and a narrow mobile width.
 3. Confirm that navigation, external profiles, email links, and local PDFs work.
 4. Verify the publication and cohort counts against their data arrays.
