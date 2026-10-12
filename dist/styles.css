@@ -89,7 +89,7 @@ img { display: block; max-width: 100%; }
 .header-parent-link:hover { color: var(--ink); }
 .theme-toggle { width: 36px; height: 36px; padding: 0; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.32); color: var(--ink); cursor: pointer; transition: color .2s, background .2s, border-color .2s, transform .12s; }
 .theme-toggle:hover { border-color: rgba(16,33,32,.3); background: rgba(255,255,255,.62); }
-.theme-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.theme-toggle:focus, .nav-toggle:focus { outline: none; }
 .theme-toggle:active { transform: scale(.94); }
 .theme-icon { width: 15px; height: 15px; border: 1.5px solid currentColor; border-radius: 50%; background: linear-gradient(90deg, currentColor 50%, transparent 50%); transition: transform .35s var(--ease); }
 .header-cta { justify-self: end; padding: 10px 15px; border-radius: 11px; background: var(--forest); color: var(--white); font-size: 14px; font-weight: 600; transition: transform .12s, background .2s; }
@@ -511,6 +511,7 @@ img { display: block; max-width: 100%; }
 .support-card.nsf { background: #d7e1df; }
 .support-card.ua-card { background: var(--crimson); color: var(--white); }
 .support-card > img { height: 56px; max-width: 210px; object-fit: contain; object-position: left center; margin-bottom: auto; }
+.support-card.gsoc-card > img { mix-blend-mode: multiply; }
 .support-card.ua-card > img { filter: none; }
 .support-card > div { margin-top: auto; }
 .support-card h3 { margin: 0 0 14px; font-size: 30px; letter-spacing: -.045em; }
@@ -766,6 +767,10 @@ html[data-theme="dark"] .support-card.ua-card p:not(.label) { color: rgba(255,25
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-toggle:focus-visible, .nav-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 }
 
 @media (prefers-reduced-transparency: reduce) {
