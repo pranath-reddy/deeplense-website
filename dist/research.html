@@ -5,6 +5,7 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f6f2">
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="DeepLense publications and research on strong gravitational lensing, dark matter, scientific simulation, representation learning, and machine learning.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Research | DeepLense">
@@ -22,8 +23,9 @@
   <script>if (/^(www\.)?deeplense\.org$/.test(window.location.hostname) && window.location.pathname.endsWith('/research.html')) window.location.replace('/research');</script>
   <title>Research | DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261010l">
-  <script src="script.js?v=20261010d" defer></script>
+  <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
+  <link rel="stylesheet" href="styles.css?v=20261011a">
+  <script src="script.js?v=20261011a" defer></script>
 </head>
 <body>
   <a class="skip-link" href="/research#content">Skip to content</a>
@@ -33,6 +35,7 @@
     <nav class="site-nav" aria-label="Primary navigation" data-nav><a href="/">Home</a><a class="active" href="/research">Research</a><a href="/software">Software</a><a href="/about">People &amp; About</a><a href="/news">News</a></nav>
     <div class="header-actions">
       <a class="header-parent-link" href="https://ml4sci.org/" target="_blank" rel="noreferrer">ML4SCI <span aria-hidden="true">↗</span></a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" data-theme-toggle><span class="theme-icon" aria-hidden="true"></span></button>
       <a class="header-cta" href="https://github.com/ML4SCI/DeepLense" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
     </div>
   </header>

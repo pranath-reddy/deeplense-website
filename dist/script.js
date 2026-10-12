@@ -250,6 +250,38 @@ const cohort2026 = [
   ["Susmit Neogi", "Physics-guided machine learning on real gravitational-lensing images"]
 ];
 
+function setupTheme() {
+  const root = document.documentElement;
+  const button = document.querySelector('[data-theme-toggle]');
+  const systemPreference = matchMedia('(prefers-color-scheme: dark)');
+  const currentTheme = () => root.dataset.theme === 'dark' ? 'dark' : 'light';
+  const render = (notify = false) => {
+    const theme = currentTheme();
+    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    button?.setAttribute('aria-pressed', String(theme === 'dark'));
+    button?.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
+    button?.setAttribute('title', `Switch to ${nextTheme} mode`);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#0b1110' : '#f4f6f2');
+    if (notify) window.dispatchEvent(new CustomEvent('deeplense:themechange', { detail: { theme } }));
+  };
+
+  button?.addEventListener('click', () => {
+    root.dataset.theme = currentTheme() === 'dark' ? 'light' : 'dark';
+    delete root.dataset.themeSource;
+    try { localStorage.setItem('deeplense-theme', root.dataset.theme); } catch {}
+    render(true);
+  });
+
+  const followSystemPreference = event => {
+    if (root.dataset.themeSource !== 'system') return;
+    root.dataset.theme = event.matches ? 'dark' : 'light';
+    render(true);
+  };
+  if (systemPreference.addEventListener) systemPreference.addEventListener('change', followSystemPreference);
+  else systemPreference.addListener?.(followSystemPreference);
+  render();
+}
+
 function setupNavigation() {
   const header = document.querySelector('[data-header]');
   const toggle = document.querySelector('[data-nav-toggle]');
@@ -406,26 +438,28 @@ function setupLensCanvas() {
     const cx = width * pointer.x;
     const cy = height * pointer.y;
     const base = Math.min(width, height) * .31;
+    const dark = document.documentElement.dataset.theme === 'dark';
+    const ringRgb = dark ? '145,227,174' : '16,45,44';
 
     const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, base * .75);
-    glow.addColorStop(0, 'rgba(244,240,168,.82)');
-    glow.addColorStop(.07, 'rgba(244,240,168,.3)');
-    glow.addColorStop(.46, 'rgba(168,239,192,.08)');
-    glow.addColorStop(1, 'rgba(168,239,192,0)');
+    glow.addColorStop(0, dark ? 'rgba(217,246,165,.7)' : 'rgba(244,240,168,.82)');
+    glow.addColorStop(.07, dark ? 'rgba(217,246,165,.22)' : 'rgba(244,240,168,.3)');
+    glow.addColorStop(.46, dark ? 'rgba(145,227,174,.1)' : 'rgba(168,239,192,.08)');
+    glow.addColorStop(1, dark ? 'rgba(145,227,174,0)' : 'rgba(168,239,192,0)');
     ctx.fillStyle = glow;
     ctx.fillRect(0, 0, width, height);
 
     for (let i = 0; i < 11; i += 1) {
       const r = base * (.42 + i * .085);
-      arc(cx, cy, r, r * (.48 + i * .012), -.48 + i * .075, -.08, Math.PI * 1.43, `rgba(16,45,44,${.32 - i * .018})`, i % 4 === 0 ? 1.4 : .75);
+      arc(cx, cy, r, r * (.48 + i * .012), -.48 + i * .075, -.08, Math.PI * 1.43, `rgba(${ringRgb},${(dark ? .26 : .32) - i * .014})`, i % 4 === 0 ? 1.4 : .75);
     }
-    arc(cx, cy, base * .72, base * .33, .55, Math.PI * .72, Math.PI * 1.88, 'rgba(16,45,44,.76)', 2.1);
-    arc(cx, cy, base * .52, base * .23, -.72, Math.PI * 1.08, Math.PI * 2.18, 'rgba(255,255,255,.72)', 1.6);
-    arc(cx, cy, base * .92, base * .39, .18, Math.PI * 1.2, Math.PI * 1.72, 'rgba(16,45,44,.55)', 4.2);
+    arc(cx, cy, base * .72, base * .33, .55, Math.PI * .72, Math.PI * 1.88, dark ? 'rgba(145,227,174,.64)' : 'rgba(16,45,44,.76)', 2.1);
+    arc(cx, cy, base * .52, base * .23, -.72, Math.PI * 1.08, Math.PI * 2.18, dark ? 'rgba(255,255,255,.48)' : 'rgba(255,255,255,.72)', 1.6);
+    arc(cx, cy, base * .92, base * .39, .18, Math.PI * 1.2, Math.PI * 1.72, dark ? 'rgba(202,216,211,.42)' : 'rgba(16,45,44,.55)', 4.2);
 
-    ctx.fillStyle = '#102d2c';
+    ctx.fillStyle = dark ? '#91e3ae' : '#102d2c';
     ctx.beginPath(); ctx.arc(cx, cy, 5.5, 0, Math.PI * 2); ctx.fill();
-    ctx.fillStyle = '#a8efc0';
+    ctx.fillStyle = dark ? '#d9f6a5' : '#a8efc0';
     [[-.88,-.08,4], [.73,-.52,3], [.42,.74,2.5], [-.44,.63,2]].forEach(([x,y,r]) => {
       ctx.beginPath(); ctx.arc(cx + base*x, cy + base*y, r, 0, Math.PI*2); ctx.fill();
     });
@@ -450,6 +484,7 @@ function setupLensCanvas() {
   window.visualViewport?.addEventListener('resize', requestResize, { passive: true });
   window.addEventListener('orientationchange', requestResize, { passive: true });
   window.addEventListener('pageshow', requestResize, { passive: true });
+  window.addEventListener('deeplense:themechange', requestResize);
   document.fonts?.ready.then(requestResize);
   requestResize();
   if (!reduced) raf = requestAnimationFrame(tick);
@@ -461,6 +496,7 @@ function setupLensCanvas() {
 }
 
 document.querySelectorAll('[data-year]').forEach(node => node.textContent = new Date().getFullYear());
+setupTheme();
 setupNavigation();
 setupPublications();
 setupPeople();

@@ -86,6 +86,11 @@ img { display: block; max-width: 100%; }
 .header-actions { justify-self: end; display: flex; align-items: center; gap: 12px; }
 .header-parent-link { padding: 9px 2px; color: #586764; font-size: 13px; font-weight: 600; transition: color .2s, transform .12s; }
 .header-parent-link:hover { color: var(--ink); }
+.theme-toggle { width: 36px; height: 36px; padding: 0; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.32); color: var(--ink); cursor: pointer; transition: color .2s, background .2s, border-color .2s, transform .12s; }
+.theme-toggle:hover { border-color: rgba(16,33,32,.3); background: rgba(255,255,255,.62); }
+.theme-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.theme-toggle:active { transform: scale(.94); }
+.theme-icon { width: 15px; height: 15px; border: 1.5px solid currentColor; border-radius: 50%; background: linear-gradient(90deg, currentColor 50%, transparent 50%); transition: transform .35s var(--ease); }
 .header-cta { justify-self: end; padding: 10px 15px; border-radius: 11px; background: var(--forest); color: var(--white); font-size: 14px; font-weight: 600; transition: transform .12s, background .2s; }
 .header-cta:hover { background: #1d4744; }
 .nav-toggle { display: none; }
@@ -674,6 +679,83 @@ img { display: block; max-width: 100%; }
   .partner-logo.ua { grid-column: auto; }
 }
 
+/* Dark mode */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0b1110;
+  --paper-2: #151d1b;
+  --ink: #edf4f0;
+  --ink-2: #cad8d3;
+  --muted: #9caaa6;
+  --line: rgba(235, 244, 240, .15);
+  --line-light: rgba(255, 255, 255, .18);
+  --forest: #123330;
+  --forest-2: #1c4a45;
+  --mint: #91e3ae;
+  --shadow: 0 22px 64px rgba(0, 0, 0, .34);
+}
+
+html[data-theme="dark"] body { background: var(--paper); }
+html[data-theme="dark"] ::selection { background: var(--mint); color: #102120; }
+html[data-theme="dark"] .site-header { border-color: rgba(255,255,255,.13); background: rgba(11,17,16,.76); box-shadow: 0 8px 34px rgba(0,0,0,.24); }
+html[data-theme="dark"] .site-header.scrolled { background: rgba(13,20,19,.9); box-shadow: 0 12px 34px rgba(0,0,0,.34); }
+html[data-theme="dark"] .site-nav { background: rgba(11,17,16,.96); }
+html[data-theme="dark"] .site-nav a, html[data-theme="dark"] .header-parent-link { color: var(--muted); }
+html[data-theme="dark"] .site-nav a:hover, html[data-theme="dark"] .site-nav a.active { color: var(--ink); background: rgba(145,227,174,.1); }
+html[data-theme="dark"] .theme-toggle { border-color: var(--line); background: rgba(255,255,255,.05); }
+html[data-theme="dark"] .theme-toggle:hover { border-color: rgba(145,227,174,.42); background: rgba(145,227,174,.1); }
+html[data-theme="dark"] .theme-icon { transform: rotate(180deg); }
+html[data-theme="dark"] .header-cta, html[data-theme="dark"] .button.primary { background: var(--mint); color: #102120; }
+html[data-theme="dark"] .header-cta:hover, html[data-theme="dark"] .button.primary:hover { background: #b4efc8; }
+html[data-theme="dark"] .button.secondary { border-color: rgba(255,255,255,.22); background: rgba(255,255,255,.05); }
+html[data-theme="dark"] .button.secondary:hover { background: rgba(255,255,255,.1); }
+
+html[data-theme="dark"] .hero, html[data-theme="dark"] .research-hero { background: #142220; }
+html[data-theme="dark"] .software-hero { background: #1a251c; }
+html[data-theme="dark"] .about-hero { background: #221f29; }
+html[data-theme="dark"] .news-hero { background: #28211c; }
+html[data-theme="dark"] .hero::after { background: radial-gradient(circle at 70% 40%, transparent 0 22%, rgba(11,17,16,.08) 45%, rgba(11,17,16,.62) 100%); }
+html[data-theme="dark"] .hero-grid { opacity: .3; background-image: linear-gradient(rgba(237,244,240,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(237,244,240,.08) 1px, transparent 1px); }
+html[data-theme="dark"] .hero h1 em, html[data-theme="dark"] .page-hero h1 em { color: #9fd8cb; }
+html[data-theme="dark"] .hero-lede, html[data-theme="dark"] .hero-caption p { color: #b7c7c2; }
+html[data-theme="dark"] .hero-caption { border-color: rgba(237,244,240,.28); }
+html[data-theme="dark"] .page-hero::before { border-color: rgba(237,244,240,.13); box-shadow: 0 0 0 70px rgba(237,244,240,.022), 0 0 0 140px rgba(237,244,240,.018); }
+html[data-theme="dark"] .intro-copy h2 span, html[data-theme="dark"] .about-statement h2 span { color: #9bc8bb; }
+
+html[data-theme="dark"] .discipline-card.ai, html[data-theme="dark"] .manifesto-section, html[data-theme="dark"] .contact-section { background: #19251d; }
+html[data-theme="dark"] .field-graphic { background: repeating-radial-gradient(ellipse at 20% 80%, transparent 0 13px, rgba(237,244,240,.1) 14px 15px); }
+html[data-theme="dark"] .pipeline-icon.sim::after { background: var(--mint); }
+html[data-theme="dark"] .pipeline-icon.infer::after { background: var(--mint); box-shadow: 0 0 35px 12px rgba(145,227,174,.12); }
+html[data-theme="dark"] .paper-feature { background: #111918; }
+html[data-theme="dark"] .paper-feature.feature-large { background: #172321; }
+html[data-theme="dark"] .paper-feature:hover { border-color: rgba(237,244,240,.34); }
+html[data-theme="dark"] .flow-visual::before, html[data-theme="dark"] .flow-visual::after, html[data-theme="dark"] .flow-visual span { border-color: rgba(237,244,240,.2); }
+html[data-theme="dark"] .flow-visual::after { border-color: rgba(145,227,174,.34); }
+html[data-theme="dark"] .flow-visual span:nth-child(1) { border-color: var(--mint); }
+html[data-theme="dark"] .manifesto-mark, html[data-theme="dark"] .manifesto-mark::before, html[data-theme="dark"] .manifesto-mark span, html[data-theme="dark"] .contact-orbit { border-color: rgba(237,244,240,.16); }
+html[data-theme="dark"] .news-card:hover, html[data-theme="dark"] .software-preview-card:hover, html[data-theme="dark"] .publication-card:hover, html[data-theme="dark"] .software-detail:hover { background: rgba(255,255,255,.045); }
+
+html[data-theme="dark"] .map-node { background: rgba(255,255,255,.035); }
+html[data-theme="dark"] .map-node:hover { border-color: rgba(145,227,174,.34); background: rgba(145,227,174,.07); }
+html[data-theme="dark"] .map-node-core { background: #19251d; }
+html[data-theme="dark"] .software-repo-link:hover, html[data-theme="dark"] .event-links a:hover, html[data-theme="dark"] .filter-chip:hover, html[data-theme="dark"] .filter-chip.active, html[data-theme="dark"] .publication-card:hover .publication-link { background: var(--mint); border-color: var(--mint); color: #102120; }
+html[data-theme="dark"] .search-field input { background: rgba(255,255,255,.055); }
+html[data-theme="dark"] .search-field input:focus { border-color: var(--mint); box-shadow: 0 0 0 3px rgba(145,227,174,.12); }
+html[data-theme="dark"] .publication-title h3 a:hover, html[data-theme="dark"] .publication-code { color: var(--mint); }
+
+html[data-theme="dark"] .person-card { background: rgba(255,255,255,.035); }
+html[data-theme="dark"] .person-card:hover { background: rgba(255,255,255,.065); box-shadow: 0 16px 42px rgba(0,0,0,.22); }
+html[data-theme="dark"] .mini-monogram { background: #18211f; color: var(--mint); }
+html[data-theme="dark"] .support-card { background: #e4ebe7; color: #102120; }
+html[data-theme="dark"] .support-card.nsf { background: #cfdcd7; }
+html[data-theme="dark"] .support-card p:not(.label), html[data-theme="dark"] .support-card dt { color: #5a6a66; }
+html[data-theme="dark"] .support-card.ua-card { background: var(--crimson); color: #fff; }
+html[data-theme="dark"] .support-card.ua-card p:not(.label) { color: rgba(255,255,255,.74); }
+
+@media (prefers-reduced-transparency: reduce) {
+  html[data-theme="dark"] .site-header, html[data-theme="dark"] .site-nav { background: var(--paper); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -686,5 +768,6 @@ img { display: block; max-width: 100%; }
 
 @media (prefers-contrast: more) {
   :root { --line: rgba(16,33,32,.42); --muted: #40504d; }
+  :root[data-theme="dark"] { --line: rgba(237,244,240,.42); --muted: #c1cec9; }
   .site-header { border-color: var(--ink); }
 }

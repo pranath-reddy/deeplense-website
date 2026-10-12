@@ -5,6 +5,7 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f6f2">
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="DeepLense is an open-source ML4SCI research group developing machine-learning methods for dark matter studies with strong gravitational lensing.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="DeepLense | Open Research in Machine Learning, Physics, and Astronomy">
@@ -21,8 +22,9 @@
   <link rel="canonical" href="https://deeplense.org/">
   <title>DeepLense | Open Research in Machine Learning, Physics, and Astronomy</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261010l">
-  <script src="script.js?v=20261010d" defer></script>
+  <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
+  <link rel="stylesheet" href="styles.css?v=20261011a">
+  <script src="script.js?v=20261011a" defer></script>
 </head>
 <body>
   <a class="skip-link" href="/#content">Skip to content</a>
@@ -43,6 +45,7 @@
     </nav>
     <div class="header-actions">
       <a class="header-parent-link" href="https://ml4sci.org/" target="_blank" rel="noreferrer">ML4SCI <span aria-hidden="true">↗</span></a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" data-theme-toggle><span class="theme-icon" aria-hidden="true"></span></button>
       <a class="header-cta" href="https://github.com/ML4SCI/DeepLense" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
     </div>
   </header>
