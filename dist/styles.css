@@ -149,6 +149,16 @@ img { display: block; max-width: 100%; }
 .spotlight-banner strong { font-size: 20px; line-height: 1.2; letter-spacing: -.025em; }
 .spotlight-link { font-size: 12px; font-weight: 650; white-space: nowrap; }
 
+.venue-strip { width: min(calc(100% - 48px), var(--max)); margin: 18px auto 0; padding: 25px 4px 24px; display: grid; grid-template-columns: minmax(150px, .72fr) 2.8fr auto; align-items: center; gap: 30px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: border-color .2s; }
+.venue-strip:hover { border-color: rgba(16,33,32,.34); }
+.venue-strip-label { color: var(--muted); font: 600 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .1em; text-transform: uppercase; }
+.venue-list { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 0; font-size: 14px; font-weight: 620; line-height: 1.35; letter-spacing: -.01em; }
+.venue-list > span { display: inline-flex; align-items: center; }
+.venue-list > span:not(:last-child)::after { content: ""; width: 3px; height: 3px; margin: 0 11px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 3px rgba(168,239,192,.12); }
+.venue-strip-link { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 650; white-space: nowrap; }
+.venue-strip-link span { transition: transform .2s var(--ease); }
+.venue-strip:hover .venue-strip-link span { transform: translateX(4px); }
+
 .section { width: min(calc(100% - 48px), var(--max)); margin-inline: auto; padding-block: 126px; }
 .section-kicker { margin: 0; color: var(--muted); font: 600 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .1em; text-transform: uppercase; }
 .intro-section { display: grid; grid-template-columns: 1fr 2.1fr; gap: 60px; }
@@ -607,6 +617,9 @@ img { display: block; max-width: 100%; }
   .hero-lede { font-size: 17px; }
   .hero-caption { left: 24px; right: 24px; bottom: 28px; width: auto; }
   .spotlight-banner { width: min(calc(100% - 32px), var(--max)); grid-template-columns: 1fr; gap: 9px; padding: 20px; }
+  .venue-strip { width: min(calc(100% - 32px), var(--max)); padding: 24px 2px; grid-template-columns: 1fr; gap: 15px; }
+  .venue-list { font-size: 13px; }
+  .venue-strip-link { margin-top: 2px; }
   .scroll-cue { display: none; }
   .hero-actions { align-items: stretch; }
   .button { flex: 1 1 auto; }
@@ -732,6 +745,7 @@ html[data-theme="dark"] .hero-lede, html[data-theme="dark"] .hero-caption p { co
 html[data-theme="dark"] .hero-caption { border-color: rgba(237,244,240,.28); }
 html[data-theme="dark"] .page-hero::before { border-color: rgba(237,244,240,.13); box-shadow: 0 0 0 70px rgba(237,244,240,.022), 0 0 0 140px rgba(237,244,240,.018); }
 html[data-theme="dark"] .intro-copy h2 span, html[data-theme="dark"] .about-statement h2 span { color: #9bc8bb; }
+html[data-theme="dark"] .venue-strip:hover { border-color: rgba(237,244,240,.34); }
 
 html[data-theme="dark"] .discipline-card.ai, html[data-theme="dark"] .manifesto-section, html[data-theme="dark"] .contact-section { background: #19251d; }
 html[data-theme="dark"] .field-graphic { background: repeating-radial-gradient(ellipse at 20% 80%, transparent 0 13px, rgba(237,244,240,.1) 14px 15px); }
