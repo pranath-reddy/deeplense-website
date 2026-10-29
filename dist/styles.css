@@ -720,7 +720,7 @@ html[data-theme="dark"] body { background: var(--paper); }
 html[data-theme="dark"] ::selection { background: var(--mint); color: #102120; }
 html[data-theme="dark"] .site-header { border-color: rgba(255,255,255,.13); background: rgba(11,17,16,.76); box-shadow: 0 8px 34px rgba(0,0,0,.24); }
 html[data-theme="dark"] .site-header.scrolled { background: rgba(13,20,19,.9); box-shadow: 0 12px 34px rgba(0,0,0,.34); }
-html[data-theme="dark"] .site-nav { background: rgba(11,17,16,.96); }
+html[data-theme="dark"] .site-nav { background: transparent; }
 html[data-theme="dark"] .site-nav a, html[data-theme="dark"] .header-parent-link { color: var(--muted); }
 html[data-theme="dark"] .site-nav a:hover, html[data-theme="dark"] .site-nav a.active { color: var(--ink); background: rgba(145,227,174,.1); }
 html[data-theme="dark"] .brand-mark { border-color: #8fddb8; }
@@ -777,8 +777,16 @@ html[data-theme="dark"] .support-card p:not(.label), html[data-theme="dark"] .su
 html[data-theme="dark"] .support-card.ua-card { background: var(--crimson); color: #fff; }
 html[data-theme="dark"] .support-card.ua-card p:not(.label) { color: rgba(255,255,255,.74); }
 
+@media (max-width: 980px) {
+  html[data-theme="dark"] .site-nav { background: rgba(11,17,16,.96); }
+}
+
 @media (prefers-reduced-transparency: reduce) {
-  html[data-theme="dark"] .site-header, html[data-theme="dark"] .site-nav { background: var(--paper); }
+  html[data-theme="dark"] .site-header { background: var(--paper); }
+}
+
+@media (max-width: 980px) and (prefers-reduced-transparency: reduce) {
+  html[data-theme="dark"] .site-nav { background: var(--paper); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -792,7 +800,11 @@ html[data-theme="dark"] .support-card.ua-card p:not(.label) { color: rgba(255,25
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .site-header, .site-nav { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .site-header { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+
+@media (max-width: 980px) and (prefers-reduced-transparency: reduce) {
+  .site-nav { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
 }
 
 @media (prefers-contrast: more) {
