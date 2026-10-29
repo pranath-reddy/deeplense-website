@@ -610,12 +610,15 @@ img { display: block; max-width: 100%; }
   .header-actions { gap: 0; margin-right: 6px; }
   .header-parent-link { display: none; }
   .site-nav .nav-parent-link { display: block; margin-top: 12px; padding-top: 22px; border-top: 1px solid var(--line); border-radius: 0; font-size: 16px; letter-spacing: 0; }
-  .hero { min-height: 1180px; margin-top: 8px; }
-  .lens-canvas { height: 640px; }
-  .hero-content { left: 24px; right: 24px; top: 350px; width: auto; transform: none; }
-  .hero h1, .page-hero h1 { font-size: clamp(52px, 16vw, 74px); }
-  .hero-lede { font-size: 17px; }
-  .hero-caption { left: 24px; right: 24px; bottom: 28px; width: auto; }
+  .hero { min-height: 0; margin-top: 8px; padding: clamp(270px, 70vw, 310px) 24px 34px; }
+  .lens-canvas { height: clamp(330px, 92vw, 410px); }
+  .hero-content { position: relative; left: auto; right: auto; top: auto; width: 100%; transform: none; }
+  .home-hero .eyebrow { margin-bottom: 20px; font-size: 11px; }
+  .home-hero h1 { font-size: clamp(46px, 12vw, 56px); line-height: .94; }
+  .page-hero h1 { font-size: clamp(52px, 16vw, 74px); }
+  .hero-lede { margin-top: 24px; font-size: 17px; }
+  .hero-actions { margin-top: 28px; }
+  .hero-caption { position: relative; left: auto; right: auto; bottom: auto; width: 100%; margin-top: 48px; }
   .spotlight-banner { width: min(calc(100% - 32px), var(--max)); grid-template-columns: 1fr; gap: 9px; padding: 20px; }
   .venue-strip { width: min(calc(100% - 32px), var(--max)); padding: 24px 2px; grid-template-columns: 1fr; gap: 15px; }
   .venue-list { font-size: 13px; }
