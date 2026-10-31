@@ -50,7 +50,7 @@ const publications = [
     authors: "Sushmanth Reddy, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
     summary: "A controlled hybrid model that refines orbit-averaged classical features without claiming quantum advantage.",
     tags: ["physics", "dark-matter"],
-    labels: ["AAAI FSS", "Quantum-classical", "Equivariance"],
+    labels: ["AAAI QIML · Oral + Poster", "Quantum-classical", "Equivariance"],
     href: "papers/FSS-26_Paper_XXX_8741.pdf"
   },
   {
