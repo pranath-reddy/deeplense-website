@@ -51,16 +51,16 @@ const publications = [
     summary: "A controlled hybrid model that refines orbit-averaged classical features without claiming quantum advantage.",
     tags: ["physics", "dark-matter"],
     labels: ["AAAI QIML · Oral + Poster", "Quantum-classical", "Equivariance"],
-    href: "papers/FSS-26_Paper_XXX_8741.pdf"
+    href: "https://ojs.aaai.org/index.php/AAAI-SS/article/view/43492"
   },
   {
     year: 2026,
     title: "DLens: Closed-Loop AI Agents for Parsimonious Scientific Machine Learning",
     authors: "Aatmaj Amol Salunke, Mywish Anand, Pranath Reddy, Michael W. Toomey & Sergei Gleyzer",
-    summary: "Selected for a spotlight talk at the AAAI Fall Symposium; typed agents connect lens simulation, architecture search, evaluation, and experiment planning.",
+    summary: "Presented as a spotlight talk at the AAAI Fall Symposium; typed agents connect lens simulation, architecture search, evaluation, and experiment planning.",
     tags: ["agents", "dark-matter"],
     labels: ["AAAI FSS", "Spotlight", "Agents"],
-    href: "papers/FSS-26_Paper_XXX_2415%20(1).pdf",
+    href: "https://ojs.aaai.org/index.php/AAAI-SS/article/view/43459",
     codeHref: "https://github.com/ML4SCI/DeepLense-AI-Scientist"
   },
   {
@@ -226,7 +226,7 @@ const people = [
   { initials: "HS", name: "Hamees Sayed", affiliation: "Smallest AI", focus: "FlowLensing, neural-operator simulation, and scientific image generation.", links: [["Website", "https://hamees-sayed.github.io/"], ["Hugging Face", "https://huggingface.co/hamees"]] },
   { initials: "KG", name: "Karthik Gaur", affiliation: "UA", focus: "Foundation models and physics-guided learning for gravitational lensing.", links: [["GitHub", "https://github.com/Karthikgaur8"]] },
   { initials: "AB", name: "Arnesh Batra", affiliation: "IIIT Delhi", focus: "JEPA-based foundation models for astronomy and strong lensing.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
-  { initials: "SR", name: "Sushmanth Reddy", affiliation: "Cisco", focus: "D4-equivariant hybrid quantum-classical lens classification.", links: [["Research", "papers/FSS-26_Paper_XXX_8741.pdf"]] },
+  { initials: "SR", name: "Sushmanth Reddy", affiliation: "Cisco", focus: "D4-equivariant hybrid quantum-classical lens classification.", links: [["Research", "https://ojs.aaai.org/index.php/AAAI-SS/article/view/43492"]] },
   { initials: "LP", name: "Lucca Paris", affiliation: "Brown", focus: "Survey-scale data processing and pipeline development for LSST.", links: [["Project", "https://ml4sci.org/gsoc/2026/proposal_DEEPLENSE7.html"]] },
   { initials: "AS", name: "Aatmaj Amol Salunke", affiliation: "NEU", focus: "Agentic AI for autonomous gravitational-lensing simulation workflows.", links: [["GSoC project", "https://summerofcode.withgoogle.com/programs/2026/organizations/machine-learning-for-science-ml4sci"]] },
   { initials: "MA", name: "Mywish Anand", affiliation: "IIT Madras", focus: "Scientific agents and autonomous gravitational-lensing workflows.", links: [["LinkedIn", "https://in.linkedin.com/in/mywishanand"]] },
