@@ -511,6 +511,9 @@ img { display: block; max-width: 100%; }
 .people-grid .person-info { flex: 1; }
 .people-grid .person-info h3 { font-size: 21px; }
 .noscript-note { color: var(--muted); }
+.past-collaborators { display: flex; flex-wrap: wrap; gap: 0; margin: 0; padding: 4px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); list-style: none; }
+.past-collaborators li { position: relative; margin-right: 20px; padding: 12px 20px 12px 0; color: var(--muted); font-size: 14px; line-height: 1.35; }
+.past-collaborators li:not(:last-child)::after { content: "·"; position: absolute; right: 0; color: var(--ink); }
 .cohort-section { display: grid; grid-template-columns: 1fr 1.35fr; gap: 90px; padding: 80px; border-radius: var(--radius); background: var(--forest); color: var(--white); }
 .cohort-intro { align-self: start; position: sticky; top: 100px; }
 .cohort-intro .section-kicker { color: rgba(255,255,255,.55); margin-bottom: 22px; }
