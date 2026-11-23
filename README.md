@@ -173,4 +173,4 @@ Repository administrators can review the configuration under **Settings → Page
 
 - [DeepLense research repository](https://github.com/ML4SCI/DeepLense)
 - [ML4SCI](https://ml4sci.org/)
-- [DeepLense models on Hugging Face](https://huggingface.co/models?search=DeepLense)
+- [DeepLense on Hugging Face](https://huggingface.co/DeepLense)
