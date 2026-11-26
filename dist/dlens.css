@@ -8,6 +8,7 @@
   --workflow-accent: #a8efc0;
   --workflow-gap: clamp(5px, 1vw, 12px);
   --workflow-period: 4s;
+  container: experiment-loop / inline-size;
   width: 100%;
   min-width: 0;
   max-width: 610px;
@@ -149,6 +150,48 @@
   .dlens-feedback::after {
     animation: dlens-handoff var(--workflow-period) ease-out 3.5s infinite both;
   }
+}
+
+/* On narrow figures, run the cycle downward and return to Train along the right edge. */
+@container experiment-loop (max-width: 22rem) {
+  .dlens-inputs .dlens-node { margin-inline: 2px; }
+  .dlens-feed { height: 28px; }
+  .dlens-feed::before { border-bottom: 1px solid var(--workflow-line); }
+  .dlens-feed > span { inset: 13px auto 0 calc(50% - 10px); border-top: 0; border-radius: 0; }
+  .dlens-cycle { position: relative; grid-template-columns: minmax(0, 1fr); gap: 14px; padding-right: 20px; }
+  .dlens-step { margin: 0; }
+  .dlens-cycle .dlens-node { grid-template-columns: 4.25rem minmax(0, 1fr); align-items: center; padding: 10px; }
+  .dlens-step:not(:last-child)::after {
+    top: 100%;
+    left: calc(50% - 4px);
+    width: 8px;
+    height: 14px;
+    clip-path: polygon(44% 0, 56% 0, 56% 65%, 100% 65%, 50% 97%, 0 65%, 44% 65%);
+  }
+  .dlens-cycle::after {
+    position: absolute;
+    inset: 16px 4px 16px auto;
+    width: 15px;
+    border: 1px dashed var(--workflow-line);
+    border-left: 0;
+    border-radius: 0 6px 6px 0;
+    content: "";
+  }
+  .dlens-cycle::before {
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    right: 13px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 1px solid var(--workflow-line);
+    border-left: 1px solid var(--workflow-line);
+    transform: rotate(45deg);
+    content: "";
+  }
+  .dlens-feedback { width: auto; min-height: 0; margin: 6px 0 16px; border: 0; text-align: right; }
+  .dlens-feedback span { top: 0; padding: 0; }
+  .dlens-feedback::before, .dlens-feedback::after { display: none; }
 }
 
 @media (max-width: 800px) {

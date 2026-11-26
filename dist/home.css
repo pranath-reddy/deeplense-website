@@ -304,6 +304,14 @@
 .spotlight-label i, .venue-list > span:not(:last-child)::after { box-shadow: none; }
 .venue-list > span:not(:last-child)::after { background: var(--muted); }
 
+@media (min-width: 801px) and (max-width: 1024px) {
+  .lab-showcase:has(#hero-dlens:checked) .lab-hero {
+    grid-template-columns: minmax(0, 610px);
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
 @media (max-width: 800px) {
   .lab-showcase {
     width: min(calc(100% - 24px), 680px);
