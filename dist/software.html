@@ -24,7 +24,7 @@
   <title>Software | DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
-  <link rel="stylesheet" href="styles.css?v=20261029c">
+  <link rel="stylesheet" href="styles.css?v=20261125p">
   <script src="script.js?v=20261114b" defer></script>
 </head>
 <body>
@@ -41,15 +41,24 @@
   </header>
 
   <main id="content">
-    <section class="page-hero software-hero">
-      <div class="reveal">
-        <p class="eyebrow"><span class="pulse-dot"></span> Open source · Six repositories</p>
-        <h1>Software for<br><em>strong-lensing research.</em></h1>
+    <header class="page-masthead software-masthead">
+      <div class="section masthead-layout">
+        <div>
+          <h1>Software</h1>
+          <p class="page-masthead-lede">Open-source tools for strong-lensing simulation, survey data processing, and experiments with machine learning and scientific agents.</p>
+        </div>
+        <figure class="masthead-visual">
+          <ol class="masthead-plate masthead-workflow" role="list">
+            <li>Simulation and survey data</li>
+            <li>Model development</li>
+            <li>Agent-led experiments</li>
+          </ol>
+          <figcaption><a href="/software#repository-map">Explore the repository map</a></figcaption>
+        </figure>
       </div>
-      <p class="page-hero-lede reveal" data-delay="1">These repositories cover lens simulation, survey-data preparation, machine-learning experiments, and agent-based research workflows.</p>
-    </section>
+    </header>
 
-    <section class="section software-map-section" aria-labelledby="stack-heading">
+    <section class="section software-map-section" id="repository-map" aria-labelledby="stack-heading">
       <div class="section-heading reveal">
         <div><p class="section-kicker">Repository map</p><h2 id="stack-heading">Six repositories across the workflow.</h2></div>
         <p>Simulation and survey data feed model development in the central DeepLense repository. Two experimental agent frameworks automate parts of data processing and model evaluation.</p>

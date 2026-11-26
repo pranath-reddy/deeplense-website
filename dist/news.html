@@ -22,7 +22,7 @@
   <title>News &amp; Project Reports | DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
-  <link rel="stylesheet" href="styles.css?v=20261114a">
+  <link rel="stylesheet" href="styles.css?v=20261125p">
   <script src="script.js?v=20261114b" defer></script>
   <script src="news.js?v=20261009a" defer></script>
 </head>
@@ -40,13 +40,18 @@
   </header>
 
   <main id="content">
-    <section class="page-hero news-hero">
-      <div class="reveal">
-        <p class="eyebrow"><span class="pulse-dot"></span> Events · Community · Project reports</p>
-        <h1>Events and updates from<br><em>the DeepLense community.</em></h1>
+    <header class="page-masthead news-masthead">
+      <div class="section masthead-layout">
+        <div>
+          <h1>News</h1>
+          <p class="page-masthead-lede">Conference presentations, community events, and project reports from DeepLense contributors.</p>
+        </div>
+        <figure class="masthead-visual">
+          <img class="masthead-plate masthead-photo" src="assets/news/aaai-fall-presentation.jpg" width="2048" height="1536" alt="Aatmaj Amol Salunke and another attendee with the DLens poster" fetchpriority="high">
+          <figcaption><a href="/news#aaai-fall-2026">DeepLense AI Scientist at the AAAI Fall Symposium</a> · 2026</figcaption>
+        </figure>
       </div>
-      <p class="page-hero-lede reveal" data-delay="1">Conference participation, open-source community meetings, and reports written by DeepLense contributors.</p>
-    </section>
+    </header>
 
     <section class="section event-section" aria-labelledby="events-heading">
       <div class="section-heading reveal">
@@ -90,7 +95,7 @@
         </div>
       </article>
 
-      <article class="event-feature event-summit">
+      <article class="event-feature event-summit" id="gsoc-mentor-summit-2024">
         <div class="event-story reveal">
           <div class="event-meta"><span>03</span><time datetime="2024-10">October 2024</time><span>Google · Sunnyvale, California</span></div>
           <p class="label">Open-source community</p>

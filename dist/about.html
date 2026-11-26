@@ -24,7 +24,7 @@
   <title>People &amp; About | DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
-  <link rel="stylesheet" href="styles.css?v=20261117a">
+  <link rel="stylesheet" href="styles.css?v=20261125p">
   <script src="script.js?v=20261114b" defer></script>
 </head>
 <body>
@@ -41,18 +41,23 @@
   </header>
 
   <main id="content">
-    <section class="page-hero about-hero">
-      <div class="reveal">
-        <p class="eyebrow"><span class="pulse-dot"></span> An ML4SCI research group</p>
-        <h1>Researchers working across<br><em>physics, astronomy, and machine learning.</em></h1>
+    <header class="page-masthead about-masthead">
+      <div class="section masthead-layout">
+        <div>
+          <h1>People &amp; About</h1>
+          <p class="page-masthead-lede">DeepLense is an ML4SCI research group bringing together researchers, mentors, and open-source contributors in physics, astronomy, and machine learning.</p>
+        </div>
+        <figure class="masthead-visual">
+          <img class="masthead-plate masthead-photo" src="assets/news/gsoc-mentor-summit-team.jpg" width="1600" height="1200" alt="Three ML4SCI mentors standing together at Google Sunnyvale" fetchpriority="high">
+          <figcaption><a href="/news#gsoc-mentor-summit-2024">ML4SCI at the GSoC Mentor Summit</a> · 2024</figcaption>
+        </figure>
       </div>
-      <p class="page-hero-lede reveal" data-delay="1">DeepLense brings together researchers, mentors, and open-source contributors from several institutions and career stages.</p>
-    </section>
+    </header>
 
     <section class="section about-statement">
       <p class="section-kicker reveal">About the group</p>
       <div class="about-statement-grid">
-        <h2 class="reveal">Open research in machine learning and <span>strong gravitational lensing.</span></h2>
+        <h2 class="reveal">Open research in machine learning and strong gravitational lensing.</h2>
         <div class="reveal" data-delay="1">
           <p>The group studies dark matter with strong gravitational lenses and develops methods for problems common in scientific machine learning, including limited labels, domain shift, physical constraints, generative simulation, and agent-based workflows.</p>
           <p>DeepLense is part of <a href="https://ml4sci.org/" target="_blank" rel="noreferrer">ML4SCI</a>, a nonprofit open-source organization that supports machine-learning projects across scientific disciplines.</p>

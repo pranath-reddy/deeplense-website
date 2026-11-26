@@ -152,22 +152,10 @@
 .lab-hero-copy { container-type: inline-size; }
 
 .lab-hero-copy :is(h1, h2) {
-  margin: 0;
   font-size: clamp(var(--hero-min-size, 2rem), min(calc(1.5rem + 2.8vw), 11.6cqi), 4rem);
-  line-height: 1.08;
-  letter-spacing: -.025em;
-  font-weight: 650;
-  text-wrap: balance;
 }
 
-.lab-lede {
-  max-width: 47ch;
-  margin: 18px 0 0;
-  color: var(--ink-2);
-  font-size: clamp(1rem, calc(.875rem + .35vw), 1.125rem);
-  line-height: 1.55;
-  text-wrap: pretty;
-}
+.lab-lede { margin: 18px 0 0; }
 
 .lab-actions {
   display: flex;
@@ -288,15 +276,6 @@
 }
 
 .lens-study figcaption a { color: var(--study-ink); text-decoration-color: var(--study-muted); }
-
-.home-page .intro-copy h2,
-.home-page .section-heading h2 {
-  margin: 0;
-  font-size: clamp(1.8rem, 3.15vw, 3.1rem);
-  font-weight: 650;
-  line-height: 1.12;
-  letter-spacing: -.025em;
-}
 
 @media (max-width: 800px) {
   .lab-showcase {

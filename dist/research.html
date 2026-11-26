@@ -24,7 +24,7 @@
   <title>Research | DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
-  <link rel="stylesheet" href="styles.css?v=20261029c">
+  <link rel="stylesheet" href="styles.css?v=20261125p">
   <script src="script.js?v=20261114b" defer></script>
 </head>
 <body>
@@ -41,13 +41,21 @@
   </header>
 
   <main id="content">
-    <section class="page-hero research-hero">
-      <div class="reveal">
-        <p class="eyebrow"><span class="pulse-dot"></span> Research record · 2019–2026</p>
-        <h1>Machine learning for<br><em>strong gravitational lensing.</em></h1>
+    <header class="page-masthead">
+      <div class="section masthead-layout">
+        <div>
+          <h1>Research</h1>
+          <p class="page-masthead-lede">We develop machine-learning methods for strong gravitational lensing, including simulation, lens detection, representation learning, image reconstruction, and physical inference.</p>
+        </div>
+        <figure class="masthead-visual">
+          <div class="masthead-plate masthead-lenses">
+            <div class="masthead-lens" role="img" aria-label="Reference simulation of a strong gravitational lens"><span aria-hidden="true">Reference</span></div>
+            <div class="masthead-lens masthead-lens-model" role="img" aria-label="FlowLensing model output for the same lens"><span aria-hidden="true">Model output</span></div>
+          </div>
+          <figcaption><a href="https://arxiv.org/abs/2510.07878">FlowLensing</a> · Simulated strong lens</figcaption>
+        </figure>
       </div>
-      <p class="page-hero-lede reveal" data-delay="1">We develop models for lens simulation, detection, representation learning, image reconstruction, and physical inference.</p>
-    </section>
+    </header>
 
     <section class="section research-thesis">
       <p class="section-kicker reveal">Scientific problem</p>
