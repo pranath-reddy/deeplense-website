@@ -24,10 +24,10 @@
   <title>People &amp; About | DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
-  <link rel="stylesheet" href="styles.css?v=20261125t">
+  <link rel="stylesheet" href="styles.css?v=20261126b">
   <script src="script.js?v=20261114b" defer></script>
 </head>
-<body>
+<body class="interior-page">
   <a class="skip-link" href="/about#content">Skip to content</a>
   <header class="site-header" data-header>
     <a class="brand" href="/" aria-label="DeepLense home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>DeepLense</span></a>
@@ -41,14 +41,16 @@
   </header>
 
   <main id="content">
-    <header class="page-masthead about-masthead">
-      <div class="section masthead-layout">
-        <div>
+    <header class="page-masthead">
+      <div class="masthead-layout">
+        <div class="masthead-copy">
           <h1>People &amp; About</h1>
           <p class="page-masthead-lede">DeepLense is an open research group within ML4SCI. Our researchers, mentors, and student contributors develop AI for science.</p>
         </div>
         <figure class="masthead-visual">
-          <img class="masthead-plate masthead-photo" src="assets/news/gsoc-mentor-summit-team.jpg" width="1600" height="1200" alt="Three ML4SCI mentors standing together at Google Sunnyvale" fetchpriority="high">
+          <div class="masthead-plate">
+            <img src="assets/news/gsoc-mentor-summit-team.jpg" width="1600" height="1200" alt="Three ML4SCI mentors standing together at Google Sunnyvale" fetchpriority="high">
+          </div>
           <figcaption><a href="/news#gsoc-mentor-summit-2024">ML4SCI at the GSoC Mentor Summit</a> · 2024</figcaption>
         </figure>
       </div>

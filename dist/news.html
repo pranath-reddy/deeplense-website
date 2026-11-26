@@ -22,11 +22,11 @@
   <title>News &amp; Project Reports | DeepLense</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
-  <link rel="stylesheet" href="styles.css?v=20261125t">
+  <link rel="stylesheet" href="styles.css?v=20261126b">
   <script src="script.js?v=20261114b" defer></script>
   <script src="news.js?v=20261009a" defer></script>
 </head>
-<body>
+<body class="interior-page">
   <a class="skip-link" href="/news#content">Skip to content</a>
   <header class="site-header" data-header>
     <a class="brand" href="/" aria-label="DeepLense home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>DeepLense</span></a>
@@ -40,14 +40,16 @@
   </header>
 
   <main id="content">
-    <header class="page-masthead news-masthead">
-      <div class="section masthead-layout">
-        <div>
+    <header class="page-masthead">
+      <div class="masthead-layout">
+        <div class="masthead-copy">
           <h1>News</h1>
           <p class="page-masthead-lede">Conference presentations, community events, and project reports from DeepLense contributors.</p>
         </div>
         <figure class="masthead-visual">
-          <img class="masthead-plate masthead-photo" src="assets/news/neurips-poster-wall.jpg" width="1600" height="1200" alt="Three DeepLense research posters displayed side by side at NeurIPS 2025" fetchpriority="high">
+          <div class="masthead-plate">
+            <img src="assets/news/neurips-poster-wall.jpg" width="1600" height="1200" alt="Three DeepLense research posters displayed side by side at NeurIPS 2025" fetchpriority="high">
+          </div>
           <figcaption><a href="/news#neurips-2025">DeepLense posters at NeurIPS 2025</a></figcaption>
         </figure>
       </div>

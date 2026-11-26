@@ -23,8 +23,8 @@
   <title>DeepLense | Open Research in Machine Learning, Physics, and Astronomy</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
-  <link rel="stylesheet" href="styles.css?v=20261125t">
-  <link rel="stylesheet" href="home.css?v=20261125t">
+  <link rel="stylesheet" href="styles.css?v=20261126b">
+  <link rel="stylesheet" href="home.css?v=20261126b">
   <link rel="stylesheet" href="dlens.css?v=20261125b">
   <script src="script.js?v=20261114b" defer></script>
 </head>
@@ -102,11 +102,13 @@
           </div>
         </div>
         <figure class="sky-figure">
-          <img src="assets/omega-nebula.webp"
-            srcset="assets/omega-nebula-small.webp 1000w, assets/omega-nebula.webp 2163w"
-            sizes="(max-width: 800px) 100vw, (max-width: 1472px) 85vw, 1224px"
-            width="2163" height="1756" fetchpriority="high"
-            alt="Hubble image of the Omega Nebula, with teal clouds and a bright ridge of orange gas lit by nearby stars.">
+          <div class="sky-image">
+            <img src="assets/omega-nebula.webp"
+              srcset="assets/omega-nebula-small.webp 1000w, assets/omega-nebula.webp 2163w"
+              sizes="(max-width: 800px) 100vw, (max-width: 1472px) 85vw, 1224px"
+              width="2163" height="1756" fetchpriority="high"
+              alt="Hubble image of the Omega Nebula, with teal clouds and a bright ridge of orange gas lit by nearby stars.">
+          </div>
           <figcaption>
             <a href="https://esahubble.org/images/heic0305a/">Omega Nebula · Hubble Space Telescope</a>
             <span>European Space Agency, NASA, and J. Hester (Arizona State University) · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
@@ -193,8 +195,8 @@
     </a>
 
     <section class="section intro-section">
-      <div class="section-kicker reveal">What is DeepLense?</div>
       <div class="intro-copy reveal">
+        <div class="section-kicker">What is DeepLense?</div>
         <h2>What strong lenses reveal about dark matter</h2>
         <p>Strong lenses provide a way to study matter that does not emit light. We build models that identify lenses, characterize their morphology, and test how much physical information can be recovered from images.</p>
         <p class="muted">The work includes simulation, survey-data processing, representation learning, super-resolution, parameter inference, and experimental tools for scientific agents.</p>
