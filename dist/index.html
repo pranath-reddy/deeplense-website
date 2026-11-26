@@ -24,9 +24,11 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>try{const saved=localStorage.getItem('deeplense-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(!saved)document.documentElement.dataset.themeSource='system'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="styles.css?v=20261029c">
+  <link rel="stylesheet" href="home.css?v=20261125k">
+  <link rel="stylesheet" href="dlens.css?v=20261125b">
   <script src="script.js?v=20261114b" defer></script>
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="/#content">Skip to content</a>
   <header class="site-header" data-header>
     <a class="brand" href="/" aria-label="DeepLense home">
@@ -52,24 +54,122 @@
   </header>
 
   <main id="content">
-    <section class="hero home-hero">
-      <canvas class="lens-canvas" data-lens-canvas aria-hidden="true"></canvas>
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-content reveal">
-        <p class="eyebrow"><span class="pulse-dot"></span> Open-source research · ML4SCI</p>
-        <h1>Open research in <em>machine learning, physics, and astronomy.</em></h1>
-        <p class="hero-lede">DeepLense is an open-source research group studying dark matter with strong gravitational lenses and developing machine-learning methods for scientific data.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="/research">Explore the research <span aria-hidden="true">↗</span></a>
-          <a class="button secondary" href="/software">Software</a>
-          <a class="button text-button" href="https://huggingface.co/DeepLense" target="_blank" rel="noreferrer">Hugging Face <span aria-hidden="true">↗</span></a>
+    <section class="section lab-showcase" aria-label="Homepage features">
+      <fieldset class="hero-switch">
+        <legend class="sr-only">Homepage feature</legend>
+        <label>
+          <input class="sr-only" type="radio" name="hero-slide" id="hero-overview" value="overview" checked>
+          <span>Overview</span>
+        </label>
+        <label>
+          <input class="sr-only" type="radio" name="hero-slide" id="hero-dlens" value="dlens">
+          <span>DeepLense AI Scientist</span>
+        </label>
+        <label>
+          <input class="sr-only" type="radio" name="hero-slide" id="hero-flowlensing" value="flowlensing">
+          <span>FlowLensing</span>
+        </label>
+      </fieldset>
+      <div class="lab-hero">
+        <div class="lab-hero-copy overview-copy">
+          <p class="lab-affiliation">An open-source research group within <a href="https://ml4sci.org/">ML4SCI</a></p>
+          <h1 id="home-heading">Building AI for scientific discovery</h1>
+          <p class="lab-lede">We develop foundation models for astronomy, faster ways to simulate physical systems, and AI agents that can plan, run, and evaluate experiments.</p>
+          <div class="lab-actions">
+            <a class="button primary" href="/research">Explore the research</a>
+            <div class="lab-secondary-actions">
+              <a class="lab-link" href="/software">Software</a>
+              <a class="lab-link" href="https://huggingface.co/DeepLense">Hugging Face</a>
+            </div>
+          </div>
         </div>
+        <div class="lab-hero-copy flowlensing-copy">
+          <p class="lab-affiliation">ML4PS at NeurIPS · 2025</p>
+          <h2>FlowLensing</h2>
+          <p class="lab-lede">FlowLensing uses conditional flow matching to generate strong-lensing images from physical parameters and dark-matter models. Compare a reference simulation with what the learned simulator produces.</p>
+          <div class="lab-actions">
+            <a class="button primary" href="https://arxiv.org/abs/2510.07878">Read the paper</a>
+          </div>
+        </div>
+        <div class="lab-hero-copy dlens-copy">
+          <p class="lab-affiliation">AAAI Fall Symposium · Spotlight talk</p>
+          <h2>DeepLense AI Scientist</h2>
+          <p class="lab-lede">DLens uses specialized agents to simulate strong lenses, search for compact classifiers, and decide what to change between training runs. Its planner reads validation metrics to choose the next experiment.</p>
+          <p class="dlens-result"><strong>87.06% accuracy</strong> on held-out simulated lenses with <strong>2.54 million parameters</strong>.</p>
+          <div class="lab-actions">
+            <a class="button primary" href="https://ojs.aaai.org/index.php/AAAI-SS/article/view/43459">Read the paper</a>
+            <a class="lab-link" href="https://github.com/ML4SCI/DeepLense-AI-Scientist">View the code</a>
+          </div>
+        </div>
+        <figure class="sky-figure">
+          <img src="assets/omega-nebula.webp"
+            srcset="assets/omega-nebula-small.webp 1000w, assets/omega-nebula.webp 2163w"
+            sizes="(max-width: 800px) 100vw, (max-width: 1472px) 85vw, 1224px"
+            width="2163" height="1756" fetchpriority="high"
+            alt="Hubble image of the Omega Nebula, with teal clouds and a bright ridge of orange gas lit by nearby stars.">
+          <figcaption>
+            <a href="https://esahubble.org/images/heic0305a/">Omega Nebula · Hubble Space Telescope</a>
+            <span>European Space Agency, NASA, and J. Hester (Arizona State University) · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+          </figcaption>
+        </figure>
+        <figure class="lens-study" aria-labelledby="lens-study-title">
+          <div class="lens-study-header">
+            <h2 id="lens-study-title">Simulating strong lenses</h2>
+            <span>Research example</span>
+          </div>
+          <div class="lens-study-pair">
+            <div class="lens-panel">
+              <div class="lens-image lens-image-reference" role="img" aria-label="The reference simulation for the selected example."></div>
+              <span>Reference simulation</span>
+            </div>
+            <div class="lens-panel">
+              <div class="lens-image lens-image-generated" role="img" aria-label="The FlowLensing output for the selected example."></div>
+              <span>Model output</span>
+            </div>
+          </div>
+          <fieldset class="lens-samples">
+            <legend>Compare another example</legend>
+            <div class="lens-sample-options">
+              <label class="lens-sample lens-sample-1">
+                <input class="sr-only" type="radio" name="lens-example" value="1">
+                <span class="lens-thumbnail" aria-hidden="true"></span><span class="sr-only">Example 1</span>
+              </label>
+              <label class="lens-sample lens-sample-2">
+                <input class="sr-only" type="radio" name="lens-example" value="2">
+                <span class="lens-thumbnail" aria-hidden="true"></span><span class="sr-only">Example 2</span>
+              </label>
+              <label class="lens-sample lens-sample-3">
+                <input class="sr-only" type="radio" name="lens-example" value="3">
+                <span class="lens-thumbnail" aria-hidden="true"></span><span class="sr-only">Example 3</span>
+              </label>
+              <label class="lens-sample lens-sample-4">
+                <input class="sr-only" type="radio" name="lens-example" value="4" checked>
+                <span class="lens-thumbnail" aria-hidden="true"></span><span class="sr-only">Example 4</span>
+              </label>
+              <label class="lens-sample lens-sample-5">
+                <input class="sr-only" type="radio" name="lens-example" value="5">
+                <span class="lens-thumbnail" aria-hidden="true"></span><span class="sr-only">Example 5</span>
+              </label>
+            </div>
+          </fieldset>
+          <figcaption>The arcs form when a foreground galaxy bends light from a galaxy behind it. <a class="lab-link" href="https://arxiv.org/abs/2510.07878">See the FlowLensing paper</a>.</figcaption>
+        </figure>
+        <figure class="dlens-workflow" aria-labelledby="dlens-workflow-title">
+          <h3 id="dlens-workflow-title">The DLens experiment loop</h3>
+          <div class="dlens-inputs" aria-label="Experiment inputs">
+            <div class="dlens-node dlens-simulate"><strong>Simulate lenses</strong><span>Physics-based training data</span></div>
+            <div class="dlens-node dlens-search"><strong>Search architectures</strong><span>Rank candidates and run short trials</span></div>
+          </div>
+          <div class="dlens-feed" aria-hidden="true"><span></span></div>
+          <ol class="dlens-cycle" aria-label="Experiment steps">
+            <li class="dlens-step dlens-train"><div class="dlens-node"><strong>Train</strong><span>Fit the selected model</span></div></li>
+            <li class="dlens-step dlens-evaluate"><div class="dlens-node"><strong>Evaluate</strong><span>Inference and validation metrics</span></div></li>
+            <li class="dlens-step dlens-plan"><div class="dlens-node"><strong>Plan</strong><span>Adjust a setting or stop</span></div></li>
+          </ol>
+          <div class="dlens-feedback"><span>Retrain if needed</span></div>
+          <figcaption>Agents exchange structured inputs and results. The planner sees metrics, while raw images stay in the numerical pipeline.</figcaption>
+        </figure>
       </div>
-      <div class="hero-caption reveal" data-delay="1">
-        <span class="caption-index">01</span>
-        <p><strong>Strong gravitational lensing.</strong> A foreground galaxy bends light from a distant source into arcs and rings. Dark-matter structure can perturb their shape.</p>
-      </div>
-      <div class="scroll-cue" aria-hidden="true"><span>Explore the work</span><i></i></div>
     </section>
 
     <a class="spotlight-banner reveal" href="/news#aaai-fall-2026">
@@ -95,10 +195,10 @@
     <section class="section intro-section">
       <div class="section-kicker reveal">What is DeepLense?</div>
       <div class="intro-copy reveal">
-        <h2>Open research on dark matter and <span>strong lensing.</span></h2>
+        <h2>What strong lenses reveal about dark matter</h2>
         <p>Strong lenses provide a way to study matter that does not emit light. We build models that identify lenses, characterize their morphology, and test how much physical information can be recovered from images.</p>
         <p class="muted">The work includes simulation, survey-data processing, representation learning, super-resolution, parameter inference, and experimental tools for scientific agents.</p>
-        <a class="inline-link" href="/about">How the group works <span aria-hidden="true">→</span></a>
+        <a class="inline-link" href="/about">How the group works</a>
       </div>
     </section>
 
@@ -155,35 +255,6 @@
           <span>04</span><div class="pipeline-icon infer" aria-hidden="true"></div><h3>Evaluate</h3><p>Measure what the models recover and how reliably results transfer to survey data.</p>
         </article>
       </div>
-    </section>
-
-    <section class="section featured-section" aria-labelledby="featured-heading">
-      <div class="section-heading reveal">
-        <div><p class="section-kicker">Selected work</p><h2 id="featured-heading">Recent publications.</h2></div>
-        <a class="inline-link" href="/research">View all 24 contributions <span aria-hidden="true">→</span></a>
-      </div>
-      <div class="featured-grid">
-        <a class="paper-feature feature-large reveal" href="https://arxiv.org/abs/2510.07878" target="_blank" rel="noreferrer">
-          <div class="feature-visual flow-visual" aria-hidden="true"><span></span><span></span><span></span></div>
-          <div class="feature-meta"><span>2025 · Generative simulation</span><span>PDF ↗</span></div>
-          <h3>FlowLensing</h3>
-          <p>A conditional flow-matching model for generating strong-lensing images across physical parameters and dark-matter classes.</p>
-          <div class="result-line"><strong>200×+</strong><span>reported speedup over intensive traditional simulators</span></div>
-        </a>
-        <a class="paper-feature reveal" data-delay="1" href="papers/54_Lens_LeJEPA_Learning_the_Ri%20(1).pdf">
-          <div class="feature-meta"><span>2026 · Representation learning</span><span>PDF ↗</span></div>
-          <h3>Lens-LeJEPA</h3>
-          <p>A self-supervised model that uses exact lens symmetries and tests when those invariances remove information needed by downstream tasks.</p>
-          <div class="mini-metric"><strong>+11.6</strong><span>accuracy points with 100 labels per class</span></div>
-        </a>
-        <a class="paper-feature dark reveal" data-delay="2" href="https://ojs.aaai.org/index.php/AAAI-SS/article/view/43459" target="_blank" rel="noreferrer">
-          <div class="feature-meta"><span class="spotlight-chip">AAAI Spotlight</span><span>Paper ↗</span></div>
-          <h3>DLens</h3>
-          <p>A multi-agent framework for coordinating lens simulation, model search, evaluation, and experiment planning through typed interfaces.</p>
-          <div class="mini-metric"><strong>8.4×</strong><span>fewer parameters than the comparison ResNet-34</span></div>
-        </a>
-      </div>
-      <p class="evidence-note reveal">Results above are reported on bounded experimental setups, primarily using simulated data. We distinguish benchmark performance from real-world scientific inference throughout the publication record.</p>
     </section>
 
     <section class="section manifesto-section">
